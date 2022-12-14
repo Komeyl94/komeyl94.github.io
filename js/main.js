@@ -203,7 +203,7 @@ $(document).ready(function ($) {
 
 
 	var pswpElement = document.querySelectorAll('.pswp')[0];
-	var items = [
+	var items8 = [
 		{
 			src: 'images/project-8-1.jpg',
 			w: 1075,
@@ -230,10 +230,10 @@ $(document).ready(function ($) {
 	};
 
 	$('#project-8').on('click', function () {
-		var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+		var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items8, options);
 		gallery.init();
 	});
-	var items = [
+	var items9 = [
 		{
 			src: 'images/project-9-1.jpg',
 			w: 1920,
@@ -251,7 +251,28 @@ $(document).ready(function ($) {
 	};
 
 	$('#project-9').on('click', function () {
-		var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+		var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items9, options);
+		gallery.init();
+	});
+	var items10 = [
+		{
+			src: 'images/work-10.jpg',
+			w: 1920,
+			h: 980
+		},
+		{
+			src: 'images/work-10-2.jpg',
+			w: 1920,
+			h: 1542
+		},
+	];
+	var options = {
+		index: 0,
+		showHideOpacity: true,
+	};
+
+	$('#project-10').on('click', function () {
+		var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items10, options);
 		gallery.init();
 	});
 });

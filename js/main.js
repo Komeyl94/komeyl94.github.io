@@ -275,5 +275,41 @@ $(document).ready(function ($) {
 		var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items10, options);
 		gallery.init();
 	});
+	var items11 = [
+		{
+			src: 'images/work-11.jpg',
+			w: 1920,
+			h: 1130
+		},
+		{
+			src: 'images/work-11-2.jpg',
+			w: 1920,
+			h: 1310
+		},
+		{
+			src: 'images/work-11-3.jpg',
+			w: 1920,
+			h: 2273
+		},
+		{
+			src: 'images/work-11-4.jpg',
+			w: 1078,
+			h: 1795
+		},
+		{
+			src: 'images/work-11-5.jpg',
+			w: 1080,
+			h: 2257
+		},
+	];
+	var options = {
+		index: 0,
+		showHideOpacity: true,
+	};
+
+	$('#project-11').on('click', function () {
+		var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items11, options);
+		gallery.init();
+	});
 });
 

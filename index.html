@@ -20,11 +20,11 @@
   <link rel="icon" type="image/png" sizes="96x96"   href="images/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16"   href="images/favicon-16x16.png">
   <link rel="manifest" href="images/manifest.json">
-  <meta name="theme-color" content="#0d1117">
+  <meta name="theme-color" content="#050b14">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/portfolio.css">
@@ -32,269 +32,334 @@
 
 <body>
 
-  <!-- Scroll Progress Bar -->
-  <div class="KW_progressContainer">
-    <div class="KW_progressBar"></div>
-  </div>
+  <!-- Cursor glow follower -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-bar" id="scrollBar"></div>
 
   <!-- Navigation -->
-  <nav class="site-nav">
+  <nav class="site-nav" id="siteNav">
     <div class="nav-inner">
       <a class="nav-brand" href="#hero">KM</a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="mailto:mkomeyl94@gmail.com" class="nav-hire">Hire Me</a>
-      <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">
+      <a href="mailto:mkomeyl94@gmail.com" class="nav-cta" id="navCta">Hire Me</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- ========== HERO ========== -->
+  <!-- ======================= HERO ======================= -->
   <section id="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-bg-glow"></div>
+    <canvas id="particles"></canvas>
+
+    <!-- Ambient orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
     <div class="hero-inner">
-      <div class="hero-content" data-aos="fade-right" data-aos-duration="700">
-        <span class="hero-greeting">Hello, I'm</span>
-        <h1 class="hero-name">Komeyl<br>Mohebian</h1>
-        <p class="hero-title">
-          <strong>Senior Front-End &amp; Mobile Developer</strong>
-        </p>
-        <div class="hero-location">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          The Hague, Netherlands
+
+      <!-- Left: Text content -->
+      <div class="hero-content" data-aos="fade-right" data-aos-duration="800">
+        <div class="hero-chip">
+          <span class="chip-dot"></span>
+          Available for new projects
         </div>
+
+        <h1 class="hero-name">
+          <span class="name-word">Komeyl</span>
+          <span class="name-word name-accent">Mohebian</span>
+        </h1>
+
+        <div class="hero-role">
+          <span class="role-static">Senior&nbsp;</span><span class="role-typed" id="typewriter"></span><span class="role-cursor">_</span>
+        </div>
+
+        <p class="hero-desc">
+          Crafting pixel-perfect web experiences and scalable mobile applications
+          for 14+ years across Transportation, FinTech, E-Commerce &amp; more.
+        </p>
+
+        <div class="hero-pills">
+          <span class="pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            The Hague, Netherlands
+          </span>
+        </div>
+
         <div class="hero-cta">
-          <a href="#contact" class="btn-primary-hero">
+          <a href="#contact" class="btn-glow">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             Get in touch
           </a>
-          <a href="https://linkedin.com/in/komeyl94/" target="_blank" rel="noopener" class="btn-outline-hero">
+          <a href="https://linkedin.com/in/komeyl94/" target="_blank" rel="noopener" class="btn-outline">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             LinkedIn
           </a>
         </div>
       </div>
 
-      <div class="hero-visual" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
-        <div class="hero-avatar-wrap">
-          <div class="hero-avatar-ring"></div>
-          <img class="hero-avatar" src="images/IMG_20251222_110610_226.jpg" alt="Komeyl Mohebian" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="hero-avatar-fallback" style="display:none">KM</div>
-          <div class="hero-badges">
-            <div class="hero-badge">
-              <span class="dot dot-green"></span>
-              Available for work
-            </div>
-            <div class="hero-badge">
-              <span class="dot dot-blue"></span>
-              14+ Years Experience
-            </div>
-            <div class="hero-badge">
-              <span class="dot dot-purple"></span>
-              Frontend &amp; Mobile
-            </div>
-          </div>
+      <!-- Right: Avatar -->
+      <div class="hero-visual" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+        <div class="avatar-frame" id="avatarFrame">
+          <div class="avatar-ring ring-outer"></div>
+          <div class="avatar-ring ring-inner"></div>
+          <div class="avatar-glow-halo"></div>
+          <img class="avatar-photo" src="images/IMG_20251222_110610_226.jpg" alt="Komeyl Mohebian"
+               onerror="this.style.display='none';document.getElementById('avatarFallback').style.display='flex'">
+          <div class="avatar-fallback" id="avatarFallback">KM</div>
         </div>
+
+        <!-- Floating info badges -->
+        <div class="floating-badge fb-1">
+          <span class="fb-dot"></span>
+          Open to work
+        </div>
+        <div class="floating-badge fb-2">⚡ 14+ Years Exp.</div>
+        <div class="floating-badge fb-3">📱 Web &amp; Mobile</div>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="hero-stats-bar">
+      <div class="hstat">
+        <div class="hstat-num-row"><span class="hstat-val" data-target="14">0</span><span class="hstat-plus">+</span></div>
+        <span class="hstat-lbl">Years Exp.</span>
+      </div>
+      <div class="hstat-divider"></div>
+      <div class="hstat">
+        <div class="hstat-num-row"><span class="hstat-val" data-target="7">0</span><span class="hstat-plus">+</span></div>
+        <span class="hstat-lbl">Companies</span>
+      </div>
+      <div class="hstat-divider"></div>
+      <div class="hstat">
+        <div class="hstat-num-row"><span class="hstat-val" data-target="5">0</span></div>
+        <span class="hstat-lbl">Industries</span>
+      </div>
+      <div class="hstat-divider"></div>
+      <div class="hstat">
+        <div class="hstat-num-row"><span class="hstat-val" data-target="20">0</span><span class="hstat-plus">+</span></div>
+        <span class="hstat-lbl">Projects</span>
       </div>
     </div>
   </section>
 
-  <!-- ========== ABOUT ========== -->
+  <!-- ======================= ABOUT ======================= -->
   <section id="about" class="section">
     <div class="section-inner">
-      <div class="about-grid">
-        <div class="about-photo-wrap" data-aos="fade-right">
-          <img class="about-photo" src="images/IMG_20251222_110610_226.jpg" alt="Komeyl Mohebian" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="about-photo-placeholder" style="display:none">KM</div>
-          <div class="about-photo-frame"></div>
+
+      <div class="section-eyebrow" data-aos="fade-up">
+        <span class="eyebrow-num">01</span>
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">About</span>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-img-col" data-aos="fade-right" data-aos-delay="100">
+          <div class="about-img-wrap">
+            <img src="images/IMG_20251222_110610_226.jpg" alt="Komeyl Mohebian"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="about-img-fallback">KM</div>
+            <div class="img-deco-border"></div>
+            <div class="img-deco-square"></div>
+          </div>
         </div>
-        <div class="about-content" data-aos="fade-left" data-aos-delay="100">
-          <span class="section-label">About me</span>
-          <h2 class="section-title">Turning ideas into<br>polished products</h2>
-          <p>
-            Self-taught web and mobile developer with <strong>14+ years of professional experience</strong>
-            across Transportation, FinTech, E-Commerce, Entertainment, and RegTech industries.
-          </p>
-          <p>
-            Proven track record of delivering high-quality applications from startup MVPs to
-            enterprise-scale platforms. Equally effective as a hands-on engineer, team lead,
-            and technical coach.
-          </p>
-          <p>
-            Passionate about clean architecture, performance optimisation, and staying current
-            with emerging technologies. Currently building Angular-powered products at
-            <a href="https://bugloos.com" target="_blank" rel="noopener">Bugloos</a> in The Hague.
-          </p>
-          <div class="about-stats">
-            <div class="stat-card">
-              <span class="stat-number">14+</span>
-              <span class="stat-label">Years Exp.</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-number">7+</span>
-              <span class="stat-label">Companies</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-number">5</span>
-              <span class="stat-label">Industries</span>
-            </div>
+
+        <div class="about-text-col" data-aos="fade-left" data-aos-delay="200">
+          <h2 class="section-title">Turning ideas into<br><span class="gradient-text">polished products</span></h2>
+
+          <p>Self-taught web and mobile developer with <strong>14+ years of professional experience</strong>
+          across Transportation, FinTech, E-Commerce, Entertainment, and RegTech industries.</p>
+
+          <p>Proven track record of delivering high-quality applications from startup MVPs to
+          enterprise-scale platforms. Equally effective as a hands-on engineer, team lead,
+          and technical coach.</p>
+
+          <p>Passionate about clean architecture, performance optimisation, and staying current
+          with emerging technologies. Currently building Angular-powered products at
+          <a href="https://bugloos.com" target="_blank" rel="noopener">Bugloos</a> in The Hague.</p>
+
+          <div class="about-tech-row">
+            <span class="tech-pill">Angular</span>
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">React Native</span>
+            <span class="tech-pill">Flutter</span>
+            <span class="tech-pill">Next.js</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SKILLS ========== -->
-  <section id="skills" class="section">
+  <!-- ======================= SKILLS ======================= -->
+  <section id="skills" class="section section-alt">
     <div class="section-inner">
-      <div data-aos="fade-up">
-        <span class="section-label">What I work with</span>
-        <h2 class="section-title">Core Skills</h2>
+
+      <div class="section-eyebrow" data-aos="fade-up">
+        <span class="eyebrow-num">02</span>
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Skills</span>
+      </div>
+
+      <div class="skills-header" data-aos="fade-up">
+        <h2 class="section-title">Core <span class="gradient-text">Expertise</span></h2>
         <p class="section-sub">A broad stack spanning modern web frameworks, cross-platform mobile, and everything in between.</p>
       </div>
+
       <div class="skills-grid">
         <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="skill-icon">⚡</div>
-          <div class="skill-category">Category</div>
-          <h3>Frontend</h3>
+          <div class="skill-card-glow"></div>
+          <div class="skill-top-bar"></div>
+          <div class="skill-header-row">
+            <span class="skill-emoji">⚡</span>
+            <span class="skill-num">01</span>
+          </div>
+          <h3 class="skill-name">Frontend</h3>
           <div class="skill-tags">
-            <span class="skill-tag">Angular</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Next.js</span>
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">RxJS</span>
-            <span class="skill-tag">NgRx</span>
-            <span class="skill-tag">Redux</span>
+            <span>Angular</span><span>React</span><span>Next.js</span>
+            <span>TypeScript</span><span>RxJS</span><span>NgRx</span><span>Redux</span>
           </div>
         </div>
-        <div class="skill-card" data-aos="fade-up" data-aos-delay="80">
-          <div class="skill-icon">📱</div>
-          <div class="skill-category">Category</div>
-          <h3>Mobile</h3>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="60">
+          <div class="skill-card-glow"></div>
+          <div class="skill-top-bar"></div>
+          <div class="skill-header-row">
+            <span class="skill-emoji">📱</span>
+            <span class="skill-num">02</span>
+          </div>
+          <h3 class="skill-name">Mobile</h3>
           <div class="skill-tags">
-            <span class="skill-tag">React Native</span>
-            <span class="skill-tag">Flutter</span>
-            <span class="skill-tag">Cross-platform</span>
-            <span class="skill-tag">iOS</span>
-            <span class="skill-tag">Android</span>
+            <span>React Native</span><span>Flutter</span><span>Cross-platform</span>
+            <span>iOS</span><span>Android</span>
           </div>
         </div>
-        <div class="skill-card" data-aos="fade-up" data-aos-delay="160">
-          <div class="skill-icon">🎨</div>
-          <div class="skill-category">Category</div>
-          <h3>Styling</h3>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="skill-card-glow"></div>
+          <div class="skill-top-bar"></div>
+          <div class="skill-header-row">
+            <span class="skill-emoji">🎨</span>
+            <span class="skill-num">03</span>
+          </div>
+          <h3 class="skill-name">Styling</h3>
           <div class="skill-tags">
-            <span class="skill-tag">Tailwind CSS</span>
-            <span class="skill-tag">SCSS</span>
-            <span class="skill-tag">CSS-in-JS</span>
-            <span class="skill-tag">Responsive UI</span>
-            <span class="skill-tag">Accessible UI</span>
+            <span>Tailwind CSS</span><span>SCSS</span><span>CSS-in-JS</span>
+            <span>Responsive UI</span><span>Accessible UI</span>
           </div>
         </div>
+
         <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="skill-icon">🔧</div>
-          <div class="skill-category">Category</div>
-          <h3>Tooling &amp; CI</h3>
+          <div class="skill-card-glow"></div>
+          <div class="skill-top-bar"></div>
+          <div class="skill-header-row">
+            <span class="skill-emoji">🔧</span>
+            <span class="skill-num">04</span>
+          </div>
+          <h3 class="skill-name">Tooling &amp; CI</h3>
           <div class="skill-tags">
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">Webpack</span>
-            <span class="skill-tag">Vite</span>
-            <span class="skill-tag">ESLint</span>
-            <span class="skill-tag">Jest</span>
-            <span class="skill-tag">Storybook</span>
-            <span class="skill-tag">Docker</span>
+            <span>Git</span><span>Webpack</span><span>Vite</span>
+            <span>ESLint</span><span>Jest</span><span>Storybook</span><span>Docker</span>
           </div>
         </div>
-        <div class="skill-card" data-aos="fade-up" data-aos-delay="80">
-          <div class="skill-icon">🏗️</div>
-          <div class="skill-category">Category</div>
-          <h3>Architecture</h3>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="60">
+          <div class="skill-card-glow"></div>
+          <div class="skill-top-bar"></div>
+          <div class="skill-header-row">
+            <span class="skill-emoji">🏗️</span>
+            <span class="skill-num">05</span>
+          </div>
+          <h3 class="skill-name">Architecture</h3>
           <div class="skill-tags">
-            <span class="skill-tag">Component Design</span>
-            <span class="skill-tag">REST</span>
-            <span class="skill-tag">GraphQL</span>
-            <span class="skill-tag">Agile</span>
-            <span class="skill-tag">Scrum</span>
+            <span>Component Design</span><span>REST</span><span>GraphQL</span>
+            <span>Agile</span><span>Scrum</span>
           </div>
         </div>
-        <div class="skill-card" data-aos="fade-up" data-aos-delay="160">
-          <div class="skill-icon">✏️</div>
-          <div class="skill-category">Category</div>
-          <h3>UI / Design</h3>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="skill-card-glow"></div>
+          <div class="skill-top-bar"></div>
+          <div class="skill-header-row">
+            <span class="skill-emoji">✏️</span>
+            <span class="skill-num">06</span>
+          </div>
+          <h3 class="skill-name">UI / Design</h3>
           <div class="skill-tags">
-            <span class="skill-tag">Figma</span>
-            <span class="skill-tag">UI Design</span>
-            <span class="skill-tag">Design-to-code</span>
-            <span class="skill-tag">Adobe XD</span>
-            <span class="skill-tag">Photoshop</span>
+            <span>Figma</span><span>UI Design</span><span>Design-to-code</span>
+            <span>Adobe XD</span><span>Photoshop</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== EXPERIENCE ========== -->
+  <!-- ======================= EXPERIENCE ======================= -->
   <section id="experience" class="section">
     <div class="section-inner">
-      <div data-aos="fade-up">
-        <span class="section-label">Work history</span>
-        <h2 class="section-title">Experience</h2>
+
+      <div class="section-eyebrow" data-aos="fade-up">
+        <span class="eyebrow-num">03</span>
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Experience</span>
       </div>
+
+      <h2 class="section-title" data-aos="fade-up">Work <span class="gradient-text">History</span></h2>
+
       <div class="timeline">
 
         <!-- Bugloos -->
-        <div class="timeline-item current" data-aos="fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <span class="timeline-company">Bugloos</span>
-              <span class="timeline-badge badge-current">Current</span>
+        <div class="tl-item tl-current" data-aos="fade-up">
+          <div class="tl-dot-wrap">
+            <div class="tl-dot"></div>
+            <div class="tl-pulse-ring"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-accent-bar"></div>
+            <div class="tl-top">
+              <div class="tl-left-info">
+                <div class="tl-company">Bugloos</div>
+                <div class="tl-role">Frontend Developer</div>
+              </div>
+              <div class="tl-right-info">
+                <span class="tl-badge tl-badge-current">● Current</span>
+                <span class="tl-date">Apr 2023 – Present</span>
+                <span class="tl-loc">The Hague, NL</span>
+              </div>
             </div>
-            <div class="timeline-role">Frontend Developer</div>
-            <div class="timeline-meta">
-              <span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                Apr 2023 – Present
-              </span>
-              <span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                The Hague, Netherlands
-              </span>
-            </div>
-            <ul class="timeline-bullets">
+            <ul class="tl-bullets">
               <li>Built and maintained Angular-based applications for a diverse client portfolio spanning e-commerce, travel, gaming, retail, health, and RegTech.</li>
               <li>Collaborated closely with UX designers to translate Figma specs into pixel-perfect, accessible UI components.</li>
-              <li>Contributed to code reviews, mentoring junior developers, and establishing front-end best practices within the team.</li>
+              <li>Contributed to code reviews, mentoring junior developers, and establishing front-end best practices.</li>
               <li>Delivered features under tight deadlines in an agency environment, managing multiple projects simultaneously.</li>
             </ul>
           </div>
         </div>
 
         <!-- Freelance -->
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <span class="timeline-company">Freelance</span>
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+          <div class="tl-card">
+            <div class="tl-accent-bar"></div>
+            <div class="tl-top">
+              <div class="tl-left-info">
+                <div class="tl-company">Freelance</div>
+                <div class="tl-role">Frontend Developer</div>
+              </div>
+              <div class="tl-right-info">
+                <span class="tl-date">May 2022 – Apr 2023</span>
+                <span class="tl-loc">Remote</span>
+              </div>
             </div>
-            <div class="timeline-role">Frontend Developer</div>
-            <div class="timeline-meta">
-              <span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                May 2022 – Apr 2023
-              </span>
-              <span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Remote
-              </span>
-            </div>
-            <ul class="timeline-bullets">
+            <ul class="tl-bullets">
               <li><strong>Marvellex Exchange:</strong> Built full website and admin panel frontend for a crypto exchange (React / TypeScript).</li>
               <li><strong>Parsian Pharmaceuticals:</strong> Developed an internal HR application frontend.</li>
               <li><strong>MiliMol Classified Ads:</strong> Ongoing development of a B2B chemicals marketplace.</li>
@@ -304,24 +369,21 @@
         </div>
 
         <!-- Autoshenas -->
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <span class="timeline-company">Autoshenas</span>
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+          <div class="tl-card">
+            <div class="tl-accent-bar"></div>
+            <div class="tl-top">
+              <div class="tl-left-info">
+                <div class="tl-company">Autoshenas</div>
+                <div class="tl-role">Frontend Developer</div>
+              </div>
+              <div class="tl-right-info">
+                <span class="tl-date">Jan 2021 – Mar 2022</span>
+                <span class="tl-loc">Tehran, Iran</span>
+              </div>
             </div>
-            <div class="timeline-role">Frontend Developer</div>
-            <div class="timeline-meta">
-              <span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                Jan 2021 – Mar 2022
-              </span>
-              <span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Tehran, Iran
-              </span>
-            </div>
-            <ul class="timeline-bullets">
+            <ul class="tl-bullets">
               <li>Delivered four interconnected products: consumer website, user-facing app, operator app, and ERP admin panel.</li>
               <li>Owned front-end architecture from scratch, ensuring consistent UX across web and mobile surfaces.</li>
             </ul>
@@ -329,24 +391,21 @@
         </div>
 
         <!-- MegaDL -->
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <span class="timeline-company">MegaDl</span>
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+          <div class="tl-card">
+            <div class="tl-accent-bar"></div>
+            <div class="tl-top">
+              <div class="tl-left-info">
+                <div class="tl-company">MegaDl</div>
+                <div class="tl-role">Frontend Developer</div>
+              </div>
+              <div class="tl-right-info">
+                <span class="tl-date">Oct 2020 – May 2021</span>
+                <span class="tl-loc">Tehran, Iran</span>
+              </div>
             </div>
-            <div class="timeline-role">Frontend Developer</div>
-            <div class="timeline-meta">
-              <span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                Oct 2020 – May 2021
-              </span>
-              <span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Tehran, Iran
-              </span>
-            </div>
-            <ul class="timeline-bullets">
+            <ul class="tl-bullets">
               <li>Developed a full-featured movie and TV streaming website and companion mobile application.</li>
               <li>Implemented video playback, search, and content discovery features with a focus on performance.</li>
             </ul>
@@ -354,24 +413,21 @@
         </div>
 
         <!-- Emji -->
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <span class="timeline-company">Emji Social Network</span>
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+          <div class="tl-card">
+            <div class="tl-accent-bar"></div>
+            <div class="tl-top">
+              <div class="tl-left-info">
+                <div class="tl-company">Emji Social Network</div>
+                <div class="tl-role">Frontend Developer</div>
+              </div>
+              <div class="tl-right-info">
+                <span class="tl-date">Nov 2016 – Oct 2020</span>
+                <span class="tl-loc">Tehran, Iran</span>
+              </div>
             </div>
-            <div class="timeline-role">Frontend Developer</div>
-            <div class="timeline-meta">
-              <span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                Nov 2016 – Oct 2020
-              </span>
-              <span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Tehran, Iran
-              </span>
-            </div>
-            <ul class="timeline-bullets">
+            <ul class="tl-bullets">
               <li>Led front-end development of the EMJI social networking application over a 4-year tenure.</li>
               <li>Built real-time features, dynamic feeds, and complex UI interactions from the ground up.</li>
             </ul>
@@ -379,44 +435,41 @@
         </div>
 
         <!-- Designerfa -->
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <span class="timeline-company">Designerfa</span>
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+          <div class="tl-card">
+            <div class="tl-accent-bar"></div>
+            <div class="tl-top">
+              <div class="tl-left-info">
+                <div class="tl-company">Designerfa</div>
+                <div class="tl-role">Front-End Developer</div>
+              </div>
+              <div class="tl-right-info">
+                <span class="tl-date">Jul 2014 – Dec 2015</span>
+                <span class="tl-loc">Alborz, Iran</span>
+              </div>
             </div>
-            <div class="timeline-role">Front-End Developer</div>
-            <div class="timeline-meta">
-              <span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                Jul 2014 – Dec 2015
-              </span>
-              <span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Alborz, Iran
-              </span>
-            </div>
-            <ul class="timeline-bullets">
+            <ul class="tl-bullets">
               <li>Designed and developed 20+ client projects using HTML5, CSS3, JavaScript, and WordPress.</li>
             </ul>
           </div>
         </div>
 
         <!-- Negash.ir -->
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <span class="timeline-company">Negash.ir</span>
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+          <div class="tl-card">
+            <div class="tl-accent-bar"></div>
+            <div class="tl-top">
+              <div class="tl-left-info">
+                <div class="tl-company">Negash.ir</div>
+                <div class="tl-role">Web Developer</div>
+              </div>
+              <div class="tl-right-info">
+                <span class="tl-date">Dec 2012 – Dec 2015</span>
+              </div>
             </div>
-            <div class="timeline-role">Web Developer</div>
-            <div class="timeline-meta">
-              <span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                Dec 2012 – Dec 2015
-              </span>
-            </div>
-            <ul class="timeline-bullets">
+            <ul class="tl-bullets">
               <li>Designed and developed blog templates and custom web projects; built a strong foundation in web fundamentals.</li>
             </ul>
           </div>
@@ -426,16 +479,19 @@
     </div>
   </section>
 
-  <!-- ========== EDUCATION ========== -->
-  <section id="education" class="section">
+  <!-- ======================= EDUCATION ======================= -->
+  <section id="education" class="section section-alt">
     <div class="section-inner">
-      <div data-aos="fade-up">
-        <span class="section-label">Academic background</span>
-        <h2 class="section-title">Education</h2>
+
+      <div class="section-eyebrow" data-aos="fade-up">
+        <span class="eyebrow-num">04</span>
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Education</span>
       </div>
+
       <div class="edu-card" data-aos="fade-up" data-aos-delay="100">
         <div class="edu-icon">🎓</div>
-        <div>
+        <div class="edu-info">
           <div class="edu-degree">Bachelor's Degree — Computer Software Engineering</div>
           <div class="edu-school">Islamic Azad University</div>
           <div class="edu-year">2012 – 2016</div>
@@ -444,103 +500,214 @@
     </div>
   </section>
 
-  <!-- ========== CONTACT ========== -->
+  <!-- ======================= CONTACT ======================= -->
   <footer id="contact">
+    <div class="contact-glow"></div>
     <div class="contact-inner">
+
       <div class="contact-heading" data-aos="fade-up">
-        <span class="section-label">Let's talk</span>
-        <h2>Get in touch</h2>
+        <div class="section-eyebrow eyebrow-center">
+          <span class="eyebrow-num">05</span>
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Contact</span>
+        </div>
+        <h2>Let's build something<br><span class="gradient-text">great together</span></h2>
         <p>Open to new opportunities, collaborations, or just a friendly chat about tech.</p>
       </div>
+
       <div class="contact-cards" data-aos="fade-up" data-aos-delay="100">
         <a href="mailto:mkomeyl94@gmail.com" class="contact-card">
-          <div class="contact-card-icon email">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#58a6ff" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div class="cc-icon cc-email">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
-          <div class="contact-card-text">
+          <div class="cc-text">
             <small>Email</small>
             <span>mkomeyl94@gmail.com</span>
           </div>
+          <svg class="cc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
         </a>
+
         <a href="https://linkedin.com/in/komeyl94/" target="_blank" rel="noopener" class="contact-card">
-          <div class="contact-card-icon linkedin">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="#3fb950"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <div class="cc-icon cc-linkedin">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           </div>
-          <div class="contact-card-text">
+          <div class="cc-text">
             <small>LinkedIn</small>
             <span>linkedin.com/in/komeyl94</span>
           </div>
+          <svg class="cc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
         </a>
       </div>
+
       <div class="footer-bottom">
-        <p>
-          &copy; <script>document.write(new Date().getFullYear());</script> Komeyl Mohebian &nbsp;·&nbsp; The Hague, Netherlands
-        </p>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Komeyl Mohebian &nbsp;·&nbsp; The Hague, Netherlands</p>
       </div>
     </div>
   </footer>
 
-  <!-- Loader -->
-  <div id="ftco-loader" class="show fullscreen">
-    <svg class="circular" width="48px" height="48px">
-      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#1c2333"/>
-      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#58a6ff"/>
-    </svg>
+  <!-- Page Loader -->
+  <div id="page-loader">
+    <div class="loader-logo">KM</div>
+    <div class="loader-track"><div class="loader-bar" id="loaderBar"></div></div>
   </div>
 
-  <!-- Scripts -->
   <script src="js/jquery.min.js"></script>
   <script src="js/aos.js"></script>
-
   <script>
-    // AOS
-    AOS.init({ duration: 650, easing: 'ease-out-cubic', once: true });
+  /* ── AOS ── */
+  AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });
 
-    // Loader
-    setTimeout(function() {
-      var l = document.getElementById('ftco-loader');
-      if (l) l.classList.remove('show');
-    }, 1);
+  /* ── Page Loader ── */
+  window.addEventListener('load', function () {
+    var bar = document.getElementById('loaderBar');
+    var loader = document.getElementById('page-loader');
+    bar.style.width = '100%';
+    setTimeout(function () { loader.classList.add('loader-out'); }, 350);
+  });
 
-    // Scroll progress bar
-    $(window).on('scroll', function() {
-      var wt = $(window).scrollTop();
-      var dh = $('body').height();
-      var wh = $(window).height();
-      var pct = (wt / (dh - wh)) * 100;
-      $('.KW_progressBar').css('width', pct + '%');
+  /* ── Scroll Progress + Nav shadow ── */
+  window.addEventListener('scroll', function () {
+    var pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById('scrollBar').style.width = pct + '%';
+    document.getElementById('siteNav').classList.toggle('nav-scrolled', window.scrollY > 60);
+  });
+
+  /* ── Cursor glow ── */
+  var cg = document.getElementById('cursorGlow');
+  var cx = -400, cy = -400, tx = -400, ty = -400;
+  document.addEventListener('mousemove', function (e) { tx = e.clientX; ty = e.clientY; });
+  (function tickCursor() {
+    cx += (tx - cx) * 0.1;
+    cy += (ty - cy) * 0.1;
+    cg.style.left = cx + 'px';
+    cg.style.top  = cy + 'px';
+    requestAnimationFrame(tickCursor);
+  })();
+
+  /* ── Avatar 3-D tilt on hover ── */
+  var af = document.getElementById('avatarFrame');
+  if (af) {
+    af.addEventListener('mousemove', function (e) {
+      var r = af.getBoundingClientRect();
+      var rx = ((e.clientY - r.top  - r.height / 2) / (r.height / 2)) * -12;
+      var ry = ((e.clientX - r.left - r.width  / 2) / (r.width  / 2)) *  12;
+      af.style.transform = 'perspective(700px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
     });
+    af.addEventListener('mouseleave', function () {
+      af.style.transform = 'perspective(700px) rotateX(0) rotateY(0)';
+    });
+  }
 
-    // Nav mobile toggle
-    document.getElementById('navToggle').addEventListener('click', function() {
-      var links = document.querySelector('.nav-links');
-      var hire  = document.querySelector('.nav-hire');
-      if (links.style.display === 'flex') {
-        links.style.display = '';
-        if (hire) hire.style.display = '';
-      } else {
-        links.style.display = 'flex';
-        links.style.flexDirection = 'column';
-        links.style.position = 'absolute';
-        links.style.top = '64px';
-        links.style.left = '0';
-        links.style.width = '100%';
-        links.style.background = 'rgba(13,17,23,0.97)';
-        links.style.padding = '1rem 2rem 1.5rem';
-        links.style.gap = '1.2rem';
-        links.style.zIndex = '999';
-        if (hire) { hire.style.display = 'none'; }
+  /* ── Typewriter ── */
+  var phrases = ['Front-End Developer', 'Mobile Developer', 'Angular Specialist', 'React Engineer', 'TypeScript Expert', 'UI Architect'];
+  var pi = 0, ci = 0, deleting = false;
+  var tw = document.getElementById('typewriter');
+  function tick() {
+    var p = phrases[pi % phrases.length];
+    if (!deleting) {
+      tw.textContent = p.slice(0, ++ci);
+      if (ci === p.length) { deleting = true; setTimeout(tick, 1800); return; }
+    } else {
+      tw.textContent = p.slice(0, --ci);
+      if (ci === 0) { deleting = false; pi++; }
+    }
+    setTimeout(tick, deleting ? 55 : 85);
+  }
+  tick();
+
+  /* ── Counter animation ── */
+  var counters = document.querySelectorAll('.hstat-val');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var el = e.target, target = parseInt(el.dataset.target), cur = 0;
+      var step = Math.max(1, Math.ceil(target / 28));
+      var t = setInterval(function () {
+        cur = Math.min(cur + step, target);
+        el.textContent = cur;
+        if (cur >= target) clearInterval(t);
+      }, 45);
+      io.unobserve(el);
+    });
+  }, { threshold: 0.6 });
+  counters.forEach(function (c) { io.observe(c); });
+
+  /* ── Particle canvas ── */
+  (function () {
+    var canvas = document.getElementById('particles');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var W, H, pts;
+
+    function resize() {
+      W = canvas.width  = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+    }
+
+    function Pt() {
+      this.x  = Math.random() * W;
+      this.y  = Math.random() * H;
+      this.vx = (Math.random() - 0.5) * 0.35;
+      this.vy = (Math.random() - 0.5) * 0.35;
+      this.r  = Math.random() * 1.4 + 0.4;
+      this.a  = Math.random() * 0.45 + 0.15;
+      this.hue = Math.random() > 0.55 ? '0,240,255' : '168,85,247';
+    }
+
+    function init() {
+      resize();
+      pts = [];
+      var n = Math.min(Math.floor((W * H) / 13000), 90);
+      for (var i = 0; i < n; i++) pts.push(new Pt());
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      for (var i = 0; i < pts.length; i++) {
+        var p = pts[i];
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) p.x = W; else if (p.x > W) p.x = 0;
+        if (p.y < 0) p.y = H; else if (p.y > H) p.y = 0;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, 6.283);
+        ctx.fillStyle = 'rgba(' + p.hue + ',' + p.a + ')';
+        ctx.fill();
       }
-    });
+      for (var i = 0; i < pts.length - 1; i++) {
+        for (var j = i + 1; j < pts.length; j++) {
+          var dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y;
+          var d = Math.sqrt(dx * dx + dy * dy);
+          if (d < 115) {
+            ctx.beginPath();
+            ctx.moveTo(pts[i].x, pts[i].y);
+            ctx.lineTo(pts[j].x, pts[j].y);
+            ctx.strokeStyle = 'rgba(0,240,255,' + ((1 - d / 115) * 0.12) + ')';
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(draw);
+    }
 
-    // Close mobile nav on link click
-    document.querySelectorAll('.nav-links a').forEach(function(link) {
-      link.addEventListener('click', function() {
-        var links = document.querySelector('.nav-links');
-        links.style.display = '';
-      });
-    });
+    init();
+    draw();
+    window.addEventListener('resize', init);
+  })();
 
+  /* ── Mobile Nav ── */
+  var toggle = document.getElementById('navToggle');
+  var links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', function () {
+    links.classList.toggle('nav-open');
+    toggle.classList.toggle('is-open');
+  });
+  document.querySelectorAll('#navLinks a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      links.classList.remove('nav-open');
+      toggle.classList.remove('is-open');
+    });
+  });
   </script>
 </body>
 </html>

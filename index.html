@@ -1,588 +1,797 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Komeyl Mohebian</title>
+  <title>Komeyl Mohebian – Senior Front-End &amp; Mobile Developer</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Senior Front-End &amp; Mobile Developer with 14+ years of experience. Angular, React, React Native, Flutter, TypeScript.">
 
-  <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="57x57"   href="images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60"   href="images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72"   href="images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76"   href="images/apple-icon-76x76.png">
   <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
   <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
   <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32"   href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96"   href="images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16"   href="images/favicon-16x16.png">
   <link rel="manifest" href="images/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#0d1117">
 
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-  <link rel="stylesheet" href="css/animate.css">
-
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/aos.css">
-
-  <link rel="stylesheet" href="css/ionicons.min.css">
-
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="css/jquery.timepicker.css">
-
   <link rel="stylesheet" href="css/photoswipe.css">
   <link rel="stylesheet" href="css/default-skin/default-skin.css">
-
-  <link rel="stylesheet" href="css/flaticon.css">
-  <link rel="stylesheet" href="css/icomoon.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/portfolio.css">
 </head>
 
 <body>
 
+  <!-- Scroll Progress Bar -->
   <div class="KW_progressContainer">
-    <div class="KW_progressBar">
-
-    </div>
+    <div class="KW_progressBar"></div>
   </div>
-  <div class="page">
-    <div id="colorlib-page">
-      <section class="home-slider owl-carousel js-fullheight">
-        <div class="slider-item js-fullheight">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text align-items-center text-center justify-content-center"
-              data-scrollax-parent="true">
-              <div class="col-md-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <p><a href="#" class="scroll">Hello! I'm</a></p>
-                <h1 class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Komeyl Mohebian</h1>
-              </div>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#hero">KM</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="mailto:mkomeyl94@gmail.com" class="nav-hire">Hire Me</a>
+      <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-glow"></div>
+    <div class="hero-inner">
+      <div class="hero-content" data-aos="fade-right" data-aos-duration="700">
+        <span class="hero-greeting">Hello, I'm</span>
+        <h1 class="hero-name">Komeyl<br>Mohebian</h1>
+        <p class="hero-title">
+          <strong>Senior Front-End &amp; Mobile Developer</strong>
+        </p>
+        <div class="hero-location">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          The Hague, Netherlands
+        </div>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary-hero">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Get in touch
+          </a>
+          <a href="https://linkedin.com/in/komeyl94/" target="_blank" rel="noopener" class="btn-outline-hero">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
+        <div class="hero-avatar-wrap">
+          <div class="hero-avatar-ring"></div>
+          <img class="hero-avatar" src="images/author-1.jpg" alt="Komeyl Mohebian" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="hero-avatar-fallback" style="display:none">KM</div>
+          <div class="hero-badges">
+            <div class="hero-badge">
+              <span class="dot dot-green"></span>
+              Available for work
+            </div>
+            <div class="hero-badge">
+              <span class="dot dot-blue"></span>
+              14+ Years Experience
+            </div>
+            <div class="hero-badge">
+              <span class="dot dot-purple"></span>
+              Frontend &amp; Mobile
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="slider-item js-fullheight">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text align-items-center text-center justify-content-center"
-              data-scrollax-parent="true">
-              <div class="col-md-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <p><a href="#" class="scroll">I'm from Tehran</a></p>
-                <h2 class="mb-3" data-scrollax="properties: {translateY: '30%', opacity: 1.6}">A Front End Engineer
-                </h2>
-              </div>
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-photo-wrap" data-aos="fade-right">
+          <img class="about-photo" src="images/author-1.jpg" alt="Komeyl Mohebian" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="about-photo-placeholder" style="display:none">KM</div>
+          <div class="about-photo-frame"></div>
+        </div>
+        <div class="about-content" data-aos="fade-left" data-aos-delay="100">
+          <span class="section-label">About me</span>
+          <h2 class="section-title">Turning ideas into<br>polished products</h2>
+          <p>
+            Self-taught web and mobile developer with <strong>14+ years of professional experience</strong>
+            across Transportation, FinTech, E-Commerce, Entertainment, and RegTech industries.
+          </p>
+          <p>
+            Proven track record of delivering high-quality applications from startup MVPs to
+            enterprise-scale platforms. Equally effective as a hands-on engineer, team lead,
+            and technical coach.
+          </p>
+          <p>
+            Passionate about clean architecture, performance optimisation, and staying current
+            with emerging technologies. Currently building Angular-powered products at
+            <a href="https://bugloos.com" target="_blank" rel="noopener">Bugloos</a> in The Hague.
+          </p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">14+</span>
+              <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">7+</span>
+              <span class="stat-label">Companies</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">5</span>
+              <span class="stat-label">Industries</span>
             </div>
           </div>
         </div>
-      </section>
-      <!-- END slider -->
+      </div>
+    </div>
+  </section>
 
-      <section class="ftco-section about-section">
-        <div class="container">
-          <div class="row d-flex" data-scrollax-parent="true">
-            <div class="col-md-4 author-img" style="background-image: url(images/author-1.jpg);"
-              data-scrollax=" properties: { translateY: '-70%'}"></div>
-            <div class="col-md-2"></div>
-            <div class="col-md-6 wrap ftco-animate">
-              <div class="about-desc">
-                <h1 class="bold-text">About</h1>
-                <div class="p-5">
-                  <h2 class="mb-5">Hi! I'm Komeyl Mohebian</h2>
-                  <p>
-                    Knowledgeable and goal-oriented Front End Engineer brings strong commitment to collaboration and solutions-oriented problem-solving. Use various web design packages to develop custom-crafted, customer-focused applications and designs. Committed to high standards of user experience, usability and speed over more than 10 years for multiple users.
-                  </p>
-                  <p><a class="special-link" href="https://linkedin.com/in/komeyl94/">Checkout my full resume</a></p>
-                  <h5>Contact me here or on <a href="https://linkedin.com/in/komeyl94/">LinkedIn</a>!</h5>
-                  <p>Email: <a href="mailto:mkomeyl94@gmail.com">mkomeyl94 [at] gmail</a></p>
-                </div>
-              </div>
-            </div>
+  <!-- ========== SKILLS ========== -->
+  <section id="skills" class="section">
+    <div class="section-inner">
+      <div data-aos="fade-up">
+        <span class="section-label">What I work with</span>
+        <h2 class="section-title">Core Skills</h2>
+        <p class="section-sub">A broad stack spanning modern web frameworks, cross-platform mobile, and everything in between.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="skill-icon">⚡</div>
+          <div class="skill-category">Category</div>
+          <h3>Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">RxJS</span>
+            <span class="skill-tag">NgRx</span>
+            <span class="skill-tag">Redux</span>
           </div>
         </div>
-      </section>
-
-      <section class="ftco-section">
-        <div class="container">
-          <div class="row justify-content-center mb-5 pb-5">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-              <span>What i do</span>
-              <h2>My Skills & Services</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-              <div class="media block-6 services p-3 py-4 d-block text-center">
-                <div class="icon mb-3"><span class="icon-layers"></span></div>
-                <div class="media-body">
-                  <h3 class="heading">Web Development</h3>
-                  <h3 class="heading">Mobile App Development</h3>
-                  <h3 class="heading">Project estimations</h3>
-                  <h3 class="heading">UI improvements</h3>
-                  <h3 class="heading">Code debugging</h3>
-                  <h3 class="heading">Website optimization</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-              <div class="media block-6 services p-3 py-4 d-block text-center">
-                <div class="icon mb-3"><span class="icon-gears"></span></div>
-                <div class="media-body">
-                  <h3 class="heading">HTML/CSS</h3>
-                  <h3 class="heading">JavaScript/TypeScript</h3>
-                  <h3 class="heading">ReactJS</h3>
-                  <h3 class="heading">React Native</h3>
-                  <h3 class="heading">Flutter</h3>
-                  <h3 class="heading">Android/iOS App</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-              <div class="media block-6 services p-3 py-4 d-block text-center">
-                <div class="icon mb-3"><span class="icon-code"></span></div>
-                <div class="media-body">
-                  <h3 class="heading">Test Driven Development</h3>
-                  <h3 class="heading">CI/CD</h3>
-                  <h3 class="heading">SASS & TailwindCSS</h3>
-                  <h3 class="heading">Adobe Photoshop</h3>
-                  <h3 class="heading">Adobe XD</h3>
-                </div>
-              </div>
-            </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="skill-icon">📱</div>
+          <div class="skill-category">Category</div>
+          <h3>Mobile</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">React Native</span>
+            <span class="skill-tag">Flutter</span>
+            <span class="skill-tag">Cross-platform</span>
+            <span class="skill-tag">iOS</span>
+            <span class="skill-tag">Android</span>
           </div>
         </div>
-      </section>
-
-      <section class="ftco-section">
-        <div class="container">
-          <div class="row justify-content-center mb-5 pb-5">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-              <span>Portfolio</span>
-              <h2>Checkout a few of my works</h2>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div class="row no-gutters">
-              <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                <a id="project-11" class="image order-2 d-flex justify-content-center align-items-center"
-                  style="background-image: url('images/work-11.jpg'); "
-                  data-scrollax=" properties: { translateY: '-30%'}">
-                </a>
-                <div class="text order-1">
-                  <h4 class="subheading">Website & Application</h4>
-                  <h2 class="heading">
-                    <a href="https://autoshenas.com/" target="_blank">Autoshenas</a>
-                  </h2>
-                  <p>
-                    was in charge of developing front end of Autoshenas website, ERP panel and 2 applications, one for users and one for the drivers which provided all kinds of car services on demand.
-                  </p>
-                  <div class="tech-used">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>Dart</span>
-                    <span>Flutter</span>
-                    <span>Bootstrap</span>
-                    <span>Adobe XD</span>
-                  </div>
-                  <p>
-                    <a href="https://autoshenas.com/" target="_blank">Visit Site</a>
-                  </p>
-                </div>
-              </div>
-              <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                <a id="project-10" class="image d-flex justify-content-center align-items-center"
-                  style="background-image: url('images/work-10.jpg'); "
-                  data-scrollax=" properties: { translateY: '-30%'}">
-                </a>
-                <div class="text">
-                  <h4 class="subheading">Web Design</h4>
-                  <h2 class="heading">
-                    <a href="http://marvellexexchange.com/" target="_blank">Marvellex Exchange Website</a>
-                  </h2>
-                  <p>
-                    I developed the website and admin panel frontend for Marvellex crypto exchange platform.
-                    Main Features: <br>
-                    A trade page consisting of live orderbooks, orders, charts and order forms<br>
-                    A convert crypto page for fast exchange, a markets list with live<br>
-                    A user dashboard which had withdrawal, deposit, history & security settings<br>
-                  </p>
-                  <div class="tech-used">
-                    <span>Typescript</span>
-                    <span>React</span>
-                    <span>Redux</span>
-                    <span>RTK Query</span>
-                    <span>Tailwind</span>
-                    <span>ReactAdmin</span>
-                  </div>
-                  <a href="http://marvellexexchange.com/" target="_blank">View Project</a>
-                </div>
-              </div>
-              <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                <a id="project-8" class="image order-2 d-flex justify-content-center align-items-center"
-                  style="background-image: url('images/work-8.png'); "
-                  data-scrollax=" properties: { translateY: '-30%'}">
-                </a>
-                <div class="text order-1">
-                  <h4 class="subheading">Application</h4>
-                  <h2 class="heading">
-                    <a>MegaDL Streaming</a>
-                  </h2>
-                  <p>
-                    At MegaDl we were making a one of a kind movies and tv shows streaming service with a blazing fast backend in GoLang. The website worked seamlessly both for the users and admins. Users could stream or download their favorites in multiple qualities and subtitles. They could watch movies and tv show trailers and browse their posters/wallpapers gallery and communicate through comments with other users. Admins could do their job of adding content to the site faster because of tools implemented to fetch most of the movie or tv show data automatically.
-                  </p>
-                  <div class="tech-used">
-                    <span>Dart</span>
-                    <span>Flutter</span>
-                    <span>Adobe Photoshop</span>
-                    <span>Adobe XD</span>
-                  </div>
-                  <p>
-                    <a href="https://megadl.co" target="_blank">Visit Site</a>
-                  </p>
-                </div>
-              </div>
-              <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                <a id="project-9" class="image d-flex justify-content-center align-items-center"
-                  style="background-image: url('images/work-9.png'); "
-                  data-scrollax=" properties: { translateY: '-30%'}">
-                </a>
-                <div class="text">
-                  <h4 class="subheading">Web Design</h4>
-                  <h2 class="heading">
-                    <a href="https://megadl.co" target="_blank">MegaDL Website</a>
-                  </h2>
-                  <p>
-                    In MegaDl website Users could stream or download their favorites in multiple qualities and subtitles. They could watch movies and tv show trailers and browse their posters/wallpapers gallery and communicate through comments with other users.
-                  </p>
-                  <div class="tech-used">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>Adobe Photoshop</span>
-                    <span>Adobe XD</span>
-                  </div>
-                  <a href="https://megadl.co" target="_blank">View Project</a>
-                </div>
-              </div>
-              <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                <a href="https://emji.app" target="_blank"
-                  class="image order-2 d-flex justify-content-center align-items-center"
-                  style="background-image: url('images/work-5.jpg'); "
-                  data-scrollax=" properties: { translateY: '-30%'}">
-                </a>
-                <div class="text order-1">
-                  <h4 class="subheading">Application</h4>
-                  <h2 class="heading">
-                    <a href="https://emji.app" target="_blank">Emji Social Network</a>
-                  </h2>
-                  <p>Emji is a new refined social networking platform aimed at simplicity and connectivity. You can
-                    share
-                    your posts with people
-                    you know and stay updated with what you love.</p>
-                  <div class="tech-used">
-                    <span>TypeScript</span>
-                    <span>React Native</span>
-                    <span>Redux</span>
-                  </div>
-                  <p>
-                    <a href="https://emji.app" target="_blank">View Project</a>
-                  </p>
-                </div>
-              </div>
-              <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                <a class="image d-flex justify-content-center align-items-center"
-                  style="background-image: url('images/work-1.jpg'); "
-                  data-scrollax=" properties: { translateY: '-30%'}">
-                </a>
-                <div class="text">
-                  <h4 class="subheading">News Blog</h4>
-                  <h2 class="heading"><a>1Pezeshk Blog Redesign</a></h2>
-                  <p>I developed a new template for this popular wordpress blog</p>
-                  <div class="tech-used">
-                    <span>PHP</span>
-                    <span>Wordpress</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                  </div>
-                </div>
-              </div>
-              <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                <a class="image order-2 d-flex justify-content-center align-items-center"
-                  style="background-image: url('images/work-2.jpg'); "
-                  data-scrollax=" properties: { translateY: '-30%'}">
-                </a>
-                <div class="text order-1">
-                  <h4 class="subheading">Web Design</h4>
-                  <h2 class="heading"><a>Upload7 Cloud Services Redesign</a></h2>
-                  <p>I developed the new template for a cloud storage script</p>
-                  <div class="tech-used">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                  </div>
-                </div>
-              </div>
-              <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                <a class="image d-flex justify-content-center align-items-center"
-                  style="background-image: url('images/work-3.jpg'); "
-                  data-scrollax=" properties: { translateY: '-30%'}">
-                </a>
-                <div class="text">
-                  <h4 class="subheading">Web Design</h4>
-                  <h2 class="heading"><a>Khabirani Online Shop</a></h2>
-                  <p>I developed a new wordpress template for this project which included an online shop managed by
-                    woocommerce.</p>
-                  <div class="tech-used">
-                    <span>PHP</span>
-                    <span>Wordpress</span>
-                    <span>Woocommerce</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                  </div>
-                </div>
-              </div>
-              <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                <a class="image order-2 d-flex justify-content-center align-items-center"
-                  style="background-image: url('images/work-4.jpg'); "
-                  data-scrollax=" properties: { translateY: '-30%'}">
-                </a>
-                <div class="text order-1">
-                  <h4 class="subheading">Web Design</h4>
-                  <h2 class="heading"><a>MelliDl Site Redesign</a></h2>
-                  <p>I developed a new template for this popular wordpress download center</p>
-                  <div class="tech-used">
-                    <span>PHP</span>
-                    <span>Wordpress</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                  </div>
-                </div>
-              </div>
-              <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                <a class="image d-flex justify-content-center align-items-center"
-                  style="background-image: url('images/work-6.jpg'); "
-                  data-scrollax=" properties: { translateY: '-30%'}">
-                </a>
-                <div class="text">
-                  <h4 class="subheading">Web Design</h4>
-                  <h2 class="heading">
-                    <a>P30Portal Blog Design</a>
-                  </h2>
-                  <p>I designed and developed this template for a news wordpress site</p>
-                  <div class="tech-used">
-                    <span>PHP</span>
-                    <span>Wordpress</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>Photoshop</span>
-                  </div>
-                </div>
-              </div>
-              <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                <a class="image order-2 d-flex justify-content-center align-items-center"
-                  style="background-image: url('images/work-7.jpg'); "
-                  data-scrollax=" properties: { translateY: '-30%'}">
-                </a>
-                <div class="text order-1">
-                  <h4 class="subheading">Web Design</h4>
-                  <h2 class="heading">
-                    <a>BabyNames Site Redesign</a>
-                  </h2>
-                  <p>I developed this template for a wordpress blog</p>
-                  <div class="tech-used">
-                    <span>PHP</span>
-                    <span>Wordpress</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-
-      <!-- <section class="ftco-section ftco-counter" id="section-counter">
-        <div class="container">
-          <div class="row justify-content-center mb-5 pb-5">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-              <span>Portfolio</span>
-              <h2>I love to share my achievements</h2>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-start">
-            <div class="col-md-5 col-sm-5 counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <span class="ftco-label">Clients</span>
-                  <strong class="number" data-number="420">0</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-5 col-sm-5 counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <span class="ftco-label">Project done</span>
-                  <strong class="number" data-number="890">0</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-end">
-            <div class="col-md-5 counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <span class="ftco-label">Cups of coffee</span>
-                  <strong class="number" data-number="1000">0</strong>
-                </div>
-              </div>
-            </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="skill-icon">🎨</div>
+          <div class="skill-category">Category</div>
+          <h3>Styling</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">SCSS</span>
+            <span class="skill-tag">CSS-in-JS</span>
+            <span class="skill-tag">Responsive UI</span>
+            <span class="skill-tag">Accessible UI</span>
           </div>
         </div>
-      </section> -->
-
-      <footer class="ftco-footer ftco-bg-dark ftco-section">
-        <div class="container">
-          <div class="row mb-5 justify-content-center">
-            <div class="col-md-5 text-center">
-              <div class="ftco-footer-widget mb-5">
-                <ul class="ftco-footer-social list-unstyled">
-                  <li class="ftco-animate"><a href="https://linkedin.com/in/komeyl94/"><span
-                        class="icon-linkedin"></span></a></li>
-                </ul>
-              </div>
-              <div class="ftco-footer-widget">
-                <h2 class="mb-3">Contact Us</h2>
-                <p class="h3 email"><a href="mailto:mkomeyl94@gmail.com">mkomeyl94 [at] gmail</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 text-center">
-
-              <p>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;
-                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made
-                with <i class="icon-heart" aria-hidden="true" style="color: red;"></i> by <a href="https://colorlib.com"
-                  target="_blank">Colorlib</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              </p>
-            </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="skill-icon">🔧</div>
+          <div class="skill-category">Category</div>
+          <h3>Tooling &amp; CI</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Webpack</span>
+            <span class="skill-tag">Vite</span>
+            <span class="skill-tag">ESLint</span>
+            <span class="skill-tag">Jest</span>
+            <span class="skill-tag">Storybook</span>
+            <span class="skill-tag">Docker</span>
           </div>
         </div>
-      </footer>
-
-      <!-- Root element of PhotoSwipe. Must have class pswp. -->
-      <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-        <!-- Background of PhotoSwipe. 
-       It's a separate element as animating opacity is faster than rgba(). -->
-        <div class="pswp__bg"></div>
-
-        <!-- Slides wrapper with overflow:hidden. -->
-        <div class="pswp__scroll-wrap">
-
-          <!-- Container that holds slides. 
-          PhotoSwipe keeps only 3 of them in the DOM to save memory.
-          Don't modify these 3 pswp__item elements, data is added later on. -->
-          <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="skill-icon">🏗️</div>
+          <div class="skill-category">Category</div>
+          <h3>Architecture</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Component Design</span>
+            <span class="skill-tag">REST</span>
+            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">Agile</span>
+            <span class="skill-tag">Scrum</span>
           </div>
-
-          <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-          <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-              <!--  Controls are self-explanatory. Order can be changed. -->
-
-              <div class="pswp__counter"></div>
-
-              <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-              <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-              <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-              <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-              <!-- element will get class pswp__preloader--active when preloader is running -->
-              <div class="pswp__preloader">
-                <div class="pswp__preloader__icn">
-                  <div class="pswp__preloader__cut">
-                    <div class="pswp__preloader__donut"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-              <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-              <div class="pswp__caption__center"></div>
-            </div>
-
+        </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="skill-icon">✏️</div>
+          <div class="skill-category">Category</div>
+          <h3>UI / Design</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">UI Design</span>
+            <span class="skill-tag">Design-to-code</span>
+            <span class="skill-tag">Adobe XD</span>
+            <span class="skill-tag">Photoshop</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ========== EXPERIENCE ========== -->
+  <section id="experience" class="section">
+    <div class="section-inner">
+      <div data-aos="fade-up">
+        <span class="section-label">Work history</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="timeline">
+
+        <!-- Bugloos -->
+        <div class="timeline-item current" data-aos="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-company">Bugloos</span>
+              <span class="timeline-badge badge-current">Current</span>
+            </div>
+            <div class="timeline-role">Frontend Developer</div>
+            <div class="timeline-meta">
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Apr 2023 – Present
+              </span>
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                The Hague, Netherlands
+              </span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Built and maintained Angular-based applications for a diverse client portfolio spanning e-commerce, travel, gaming, retail, health, and RegTech.</li>
+              <li>Collaborated closely with UX designers to translate Figma specs into pixel-perfect, accessible UI components.</li>
+              <li>Contributed to code reviews, mentoring junior developers, and establishing front-end best practices within the team.</li>
+              <li>Delivered features under tight deadlines in an agency environment, managing multiple projects simultaneously.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Freelance -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-company">Freelance</span>
+            </div>
+            <div class="timeline-role">Frontend Developer</div>
+            <div class="timeline-meta">
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                May 2022 – Apr 2023
+              </span>
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Remote
+              </span>
+            </div>
+            <ul class="timeline-bullets">
+              <li><strong>Marvellex Exchange:</strong> Built full website and admin panel frontend for a crypto exchange (React / TypeScript).</li>
+              <li><strong>Parsian Pharmaceuticals:</strong> Developed an internal HR application frontend.</li>
+              <li><strong>MiliMol Classified Ads:</strong> Ongoing development of a B2B chemicals marketplace.</li>
+              <li><strong>Pay.ir Redesign:</strong> Implemented new Figma designs into a production static website.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Autoshenas -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-company">Autoshenas</span>
+            </div>
+            <div class="timeline-role">Frontend Developer</div>
+            <div class="timeline-meta">
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Jan 2021 – Mar 2022
+              </span>
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Tehran, Iran
+              </span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Delivered four interconnected products: consumer website, user-facing app, operator app, and ERP admin panel.</li>
+              <li>Owned front-end architecture from scratch, ensuring consistent UX across web and mobile surfaces.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- MegaDL -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-company">MegaDl</span>
+            </div>
+            <div class="timeline-role">Frontend Developer</div>
+            <div class="timeline-meta">
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Oct 2020 – May 2021
+              </span>
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Tehran, Iran
+              </span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Developed a full-featured movie and TV streaming website and companion mobile application.</li>
+              <li>Implemented video playback, search, and content discovery features with a focus on performance.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Emji -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-company">Emji Social Network</span>
+            </div>
+            <div class="timeline-role">Frontend Developer</div>
+            <div class="timeline-meta">
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Nov 2016 – Oct 2020
+              </span>
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Tehran, Iran
+              </span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Led front-end development of the EMJI social networking application over a 4-year tenure.</li>
+              <li>Built real-time features, dynamic feeds, and complex UI interactions from the ground up.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Designerfa -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-company">Designerfa</span>
+            </div>
+            <div class="timeline-role">Front-End Developer</div>
+            <div class="timeline-meta">
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Jul 2014 – Dec 2015
+              </span>
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Alborz, Iran
+              </span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Designed and developed 20+ client projects using HTML5, CSS3, JavaScript, and WordPress.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Negash.ir -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-company">Negash.ir</span>
+            </div>
+            <div class="timeline-role">Web Developer</div>
+            <div class="timeline-meta">
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Dec 2012 – Dec 2015
+              </span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Designed and developed blog templates and custom web projects; built a strong foundation in web fundamentals.</li>
+            </ul>
+          </div>
         </div>
 
       </div>
-
-      <!-- loader -->
-      <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-          <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-          <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-            stroke="#F96D00" /></svg></div>
-
     </div>
+  </section>
 
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <div data-aos="fade-up">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-sub">A selection of products built across industries — web, mobile, and everything in between.</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Autoshenas -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-thumb" style="background-image: url('images/work-11.jpg');">
+            <div class="project-thumb-overlay">
+              <a id="project-11-link" class="project-thumb-btn gallery-btn" href="#">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                Gallery
+              </a>
+              <a href="https://autoshenas.com/" target="_blank" rel="noopener" class="project-thumb-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Visit
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-type">Website &amp; Application</div>
+            <h3>Autoshenas</h3>
+            <p>Four interconnected products: consumer website, user-facing app, operator app, and ERP admin panel for an on-demand car services platform.</p>
+            <div class="project-tags">
+              <span class="project-tag">Flutter</span>
+              <span class="project-tag">Dart</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">Adobe XD</span>
+            </div>
+            <a href="https://autoshenas.com/" target="_blank" rel="noopener" class="project-link">
+              autoshenas.com
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Marvellex Exchange -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="project-thumb" style="background-image: url('images/work-10.jpg');">
+            <div class="project-thumb-overlay">
+              <a id="project-10-link" class="project-thumb-btn gallery-btn" href="#">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                Gallery
+              </a>
+              <a href="http://marvellexexchange.com/" target="_blank" rel="noopener" class="project-thumb-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Visit
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-type">FinTech · Web App</div>
+            <h3>Marvellex Exchange</h3>
+            <p>Full website and admin panel for a crypto exchange platform featuring live orderbooks, trading charts, fast conversion, and a user dashboard.</p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Redux</span>
+              <span class="project-tag">RTK Query</span>
+              <span class="project-tag">Tailwind</span>
+            </div>
+            <a href="http://marvellexexchange.com/" target="_blank" rel="noopener" class="project-link">
+              marvellexexchange.com
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- MegaDL App -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-thumb" style="background-image: url('images/work-9.png'); background-color: #16213e;">
+            <div class="project-thumb-overlay">
+              <a id="project-9-link" class="project-thumb-btn gallery-btn" href="#">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                Gallery
+              </a>
+              <a href="https://megadl.co" target="_blank" rel="noopener" class="project-thumb-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Visit
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-type">Entertainment · Streaming</div>
+            <h3>MegaDL Website</h3>
+            <p>Full-featured movie &amp; TV streaming website. Users can stream or download content in multiple qualities, browse trailers, wallpapers, and engage via comments.</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Adobe XD</span>
+            </div>
+            <a href="https://megadl.co" target="_blank" rel="noopener" class="project-link">
+              megadl.co
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Emji -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="project-thumb" style="background-image: url('images/work-5.jpg');">
+            <div class="project-thumb-overlay">
+              <a href="https://emji.app" target="_blank" rel="noopener" class="project-thumb-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Visit
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-type">Social Network · Mobile</div>
+            <h3>Emji Social Network</h3>
+            <p>A refined social networking platform built over 4 years. Focused on simplicity and connectivity with real-time feeds, dynamic interactions, and cross-platform support.</p>
+            <div class="project-tags">
+              <span class="project-tag">React Native</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Redux</span>
+            </div>
+            <a href="https://emji.app" target="_blank" rel="noopener" class="project-link">
+              emji.app
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- MegaDL Mobile App -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-thumb" style="background-image: url('images/work-8.png'); background-color: #16213e;">
+            <div class="project-thumb-overlay">
+              <a id="project-8-link" class="project-thumb-btn gallery-btn" href="#">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                Gallery
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-type">Entertainment · Mobile App</div>
+            <h3>MegaDL Mobile App</h3>
+            <p>Companion mobile app for MegaDL streaming. Features video playback, content discovery, trailer browsing, gallery viewer, and social commenting.</p>
+            <div class="project-tags">
+              <span class="project-tag">Flutter</span>
+              <span class="project-tag">Dart</span>
+              <span class="project-tag">Adobe XD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Older WordPress work -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="project-thumb" style="background-image: url('images/work-6.jpg');">
+            <div class="project-thumb-overlay"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-type">Earlier Work · 2012–2015</div>
+            <h3>WordPress Themes &amp; Templates</h3>
+            <p>20+ client projects during early career: blog templates, news portals (P30Portal, 1Pezeshk), online shops (Khabirani), and download sites — all built from scratch.</p>
+            <div class="project-tags">
+              <span class="project-tag">WordPress</span>
+              <span class="project-tag">PHP</span>
+              <span class="project-tag">HTML/CSS</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Photoshop</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION ========== -->
+  <section id="education" class="section">
+    <div class="section-inner">
+      <div data-aos="fade-up">
+        <span class="section-label">Academic background</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="edu-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="edu-icon">🎓</div>
+        <div>
+          <div class="edu-degree">Bachelor's Degree — Computer Software Engineering</div>
+          <div class="edu-school">Islamic Azad University</div>
+          <div class="edu-year">2012 – 2016</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <footer id="contact">
+    <div class="contact-inner">
+      <div class="contact-heading" data-aos="fade-up">
+        <span class="section-label">Let's talk</span>
+        <h2>Get in touch</h2>
+        <p>Open to new opportunities, collaborations, or just a friendly chat about tech.</p>
+      </div>
+      <div class="contact-cards" data-aos="fade-up" data-aos-delay="100">
+        <a href="mailto:mkomeyl94@gmail.com" class="contact-card">
+          <div class="contact-card-icon email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#58a6ff" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-card-text">
+            <small>Email</small>
+            <span>mkomeyl94@gmail.com</span>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/komeyl94/" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-card-icon linkedin">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#3fb950"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div class="contact-card-text">
+            <small>LinkedIn</small>
+            <span>linkedin.com/in/komeyl94</span>
+          </div>
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; <script>document.write(new Date().getFullYear());</script> Komeyl Mohebian &nbsp;·&nbsp; The Hague, Netherlands
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PhotoSwipe Root -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+      <div class="pswp__ui pswp__ui--hidden">
+        <div class="pswp__top-bar">
+          <div class="pswp__counter"></div>
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+        <div class="pswp__caption"><div class="pswp__caption__center"></div></div>
+      </div>
+    </div>
   </div>
 
+  <!-- Loader -->
+  <div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#1c2333"/>
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#58a6ff"/>
+    </svg>
+  </div>
 
+  <!-- Scripts -->
   <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/photoswipe.min.js"></script>
   <script src="js/photoswipe-ui-default.min.js"></script>
-  <script src="js/main.js"></script>
 
+  <script>
+    // AOS
+    AOS.init({ duration: 650, easing: 'ease-out-cubic', once: true });
+
+    // Loader
+    setTimeout(function() {
+      var l = document.getElementById('ftco-loader');
+      if (l) l.classList.remove('show');
+    }, 1);
+
+    // Scroll progress bar
+    $(window).on('scroll', function() {
+      var wt = $(window).scrollTop();
+      var dh = $('body').height();
+      var wh = $(window).height();
+      var pct = (wt / (dh - wh)) * 100;
+      $('.KW_progressBar').css('width', pct + '%');
+    });
+
+    // Nav mobile toggle
+    document.getElementById('navToggle').addEventListener('click', function() {
+      var links = document.querySelector('.nav-links');
+      var hire  = document.querySelector('.nav-hire');
+      if (links.style.display === 'flex') {
+        links.style.display = '';
+        if (hire) hire.style.display = '';
+      } else {
+        links.style.display = 'flex';
+        links.style.flexDirection = 'column';
+        links.style.position = 'absolute';
+        links.style.top = '64px';
+        links.style.left = '0';
+        links.style.width = '100%';
+        links.style.background = 'rgba(13,17,23,0.97)';
+        links.style.padding = '1rem 2rem 1.5rem';
+        links.style.gap = '1.2rem';
+        links.style.zIndex = '999';
+        if (hire) { hire.style.display = 'none'; }
+      }
+    });
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        var links = document.querySelector('.nav-links');
+        links.style.display = '';
+      });
+    });
+
+    // PhotoSwipe galleries
+    var pswpEl = document.querySelectorAll('.pswp')[0];
+    var pswpOpts = { showHideOpacity: true };
+
+    var galleries = {
+      'project-11-link': [
+        { src: 'images/work-11.jpg',   w: 1920, h: 1130 },
+        { src: 'images/work-11-2.jpg', w: 1920, h: 1310 },
+        { src: 'images/work-11-3.jpg', w: 1920, h: 2273 },
+        { src: 'images/work-11-4.jpg', w: 1078, h: 1795 },
+        { src: 'images/work-11-5.jpg', w: 1080, h: 2257 }
+      ],
+      'project-10-link': [
+        { src: 'images/work-10.jpg',   w: 1920, h: 980  },
+        { src: 'images/work-10-2.jpg', w: 1920, h: 1542 }
+      ],
+      'project-9-link': [
+        { src: 'images/project-9-1.jpg', w: 1920, h: 4570 },
+        { src: 'images/project-9-2.jpg', w: 1920, h: 3930 }
+      ],
+      'project-8-link': [
+        { src: 'images/project-8-1.jpg', w: 1075, h: 2016 },
+        { src: 'images/project-8-2.jpg', w: 1075, h: 2016 },
+        { src: 'images/project-8-3.jpg', w: 1075, h: 2016 },
+        { src: 'images/project-8-4.jpg', w: 1075, h: 2016 }
+      ]
+    };
+
+    Object.keys(galleries).forEach(function(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        var g = new PhotoSwipe(pswpEl, PhotoSwipeUI_Default, galleries[id], pswpOpts);
+        g.init();
+      });
+    });
+  </script>
 </body>
-
 </html>

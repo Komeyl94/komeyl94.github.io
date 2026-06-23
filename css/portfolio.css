@@ -763,6 +763,7 @@ ul { list-style: none; }
 .skill-card:nth-child(4) .skill-top-bar { background: linear-gradient(90deg, #fb923c, #fbbf24); }
 .skill-card:nth-child(5) .skill-top-bar { background: linear-gradient(90deg, #34d399, #00f0ff); }
 .skill-card:nth-child(6) .skill-top-bar { background: linear-gradient(90deg, #60a5fa, #a855f7); }
+.skill-card:nth-child(7) .skill-top-bar { background: linear-gradient(90deg, #a855f7, #00f0ff); }
 
 .skill-card-glow {
   position: absolute;

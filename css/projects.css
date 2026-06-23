@@ -1,0 +1,288 @@
+/* ============================================================
+   FEATURED PROJECTS  —  extends portfolio.css design tokens
+   (uses existing --bg, --accent, --card, --radius, --font-h, etc.)
+   ============================================================ */
+
+#projects { background: var(--bg); position: relative; overflow: hidden; }
+
+/* faint grid glow behind the section */
+#projects::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0,240,255,0.06), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.projects-grid {
+  position: relative;
+  z-index: 1;
+  margin-top: 3.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Featured (hero) project spans the full row */
+.proj-card.proj-featured { grid-column: 1 / -1; }
+
+/* ── Card shell ─────────────────────────────────────── */
+.proj-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.9rem;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform var(--trans), border-color var(--trans), box-shadow var(--trans);
+}
+.proj-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 240, 255, 0.22);
+  box-shadow: var(--shadow), var(--glow-c);
+}
+
+/* top accent bar, mirrors timeline accent */
+.proj-accent-bar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+  opacity: 0.55;
+  transition: opacity var(--trans);
+}
+.proj-card:hover .proj-accent-bar { opacity: 1; }
+
+/* ── Header ─────────────────────────────────────────── */
+.proj-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.proj-titles { min-width: 0; }
+.proj-name {
+  font-family: var(--font-h);
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.proj-featured .proj-name { font-size: 1.7rem; }
+.proj-kicker {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+.proj-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.9rem;
+  margin-top: 0.55rem;
+  font-size: 0.76rem;
+  color: var(--text-3);
+}
+.proj-meta-row span { display: inline-flex; align-items: center; gap: 0.3rem; }
+
+/* role tag, top-right */
+.proj-role {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--green);
+  border: 1px solid rgba(0, 255, 136, 0.25);
+  background: rgba(0, 255, 136, 0.06);
+  border-radius: 999px;
+  padding: 0.28rem 0.7rem;
+  white-space: nowrap;
+}
+
+/* ── Body copy ──────────────────────────────────────── */
+.proj-summary {
+  color: var(--text-2);
+  font-size: 0.92rem;
+  line-height: 1.75;
+  margin: 0.9rem 0 0;
+}
+.proj-featured .proj-summary { max-width: 70ch; }
+
+.proj-detail-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+.proj-detail-list li {
+  position: relative;
+  padding-left: 1.3rem;
+  color: var(--text-2);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+.proj-detail-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+.proj-featured .proj-detail-list {
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem 2rem;
+}
+
+/* ── Metrics row (featured) ─────────────────────────── */
+.proj-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  margin: 1.4rem 0 0;
+  padding: 1.1rem 0 0;
+  border-top: 1px solid var(--border-2);
+}
+.proj-metric { display: flex; flex-direction: column; gap: 0.15rem; }
+.proj-metric-val {
+  font-family: var(--font-h);
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+.proj-metric-lbl {
+  font-size: 0.72rem;
+  color: var(--text-3);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* ── Tech stack chips ───────────────────────────────── */
+.proj-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1.4rem;
+}
+.proj-stack span {
+  padding: 0.22rem 0.62rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-2);
+  border-radius: 4px;
+  font-size: 0.74rem;
+  color: var(--text-2);
+  font-family: var(--font-h);
+  letter-spacing: 0.01em;
+  transition: all var(--trans);
+}
+.proj-card:hover .proj-stack span {
+  border-color: rgba(0, 240, 255, 0.14);
+  color: var(--text);
+}
+
+/* link row */
+.proj-links {
+  display: flex;
+  gap: 1.1rem;
+  margin-top: 1.4rem;
+}
+.proj-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: color var(--trans), transform var(--trans);
+}
+.proj-link:hover { color: var(--text); transform: translateX(2px); }
+.proj-link svg { width: 15px; height: 15px; }
+
+/* ── AI sub-projects: compact 3-up ──────────────────── */
+.proj-ai-grid {
+  position: relative;
+  z-index: 1;
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.proj-mini {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.4rem;
+  transition: transform var(--trans), border-color var(--trans);
+}
+.proj-mini:hover { transform: translateY(-3px); border-color: rgba(168, 85, 247, 0.22); }
+.proj-mini-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 0.55rem;
+}
+.proj-mini-name {
+  font-family: var(--font-h);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+.proj-mini-desc {
+  font-size: 0.83rem;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+/* sub-eyebrow for the AI cluster */
+.proj-subhead {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 3rem;
+}
+.proj-subhead h3 {
+  font-family: var(--font-h);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.proj-subhead .proj-subline {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(168,85,247,0.4), transparent);
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 860px) {
+  .projects-grid { grid-template-columns: 1fr; }
+  .proj-featured .proj-detail-list { grid-template-columns: 1fr; }
+  .proj-ai-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .proj-card { padding: 1.5rem; }
+  .proj-head { flex-direction: column; }
+  .proj-metrics { gap: 1.25rem; }
+}

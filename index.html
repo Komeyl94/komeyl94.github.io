@@ -1,956 +1,782 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <title>Komeyl Mohebian – Senior Front-End &amp; Mobile Developer</title>
   <meta charset="utf-8">
+  <title>Komeyl Mohebian - Lead Front-End, Mobile and AI Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Senior Front-End &amp; Mobile Developer with 14+ years of experience. Angular, React, TypeScript, and applied GenAI (LLM integration, RAG, AI agents).">
+  <meta name="description" content="Komeyl Mohebian is a lead front-end and mobile engineer in The Hague with 14 years of experience. Angular, TypeScript, React Native, and applied AI: LLM integration, RAG, and agents.">
+  <meta name="author" content="Komeyl Mohebian">
 
-  <meta property="og:title" content="Komeyl Mohebian – Senior Front-End &amp; Mobile Developer">
-  <meta property="og:description" content="Senior Front-End &amp; Mobile Developer with 14+ years of experience. Angular, React, TypeScript, and applied GenAI (LLM integration, RAG, AI agents).">
+  <meta property="og:title" content="Komeyl Mohebian - Lead Front-End, Mobile and AI Engineer">
+  <meta property="og:description" content="14 years building enterprise web and mobile platforms across fintech, e-commerce, and RegTech. Now integrating AI into production.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://komeyl94.github.io/">
+  <meta property="og:image" content="https://komeyl94.github.io/images/IMG_20251222_110610_226.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Komeyl Mohebian - Lead Front-End, Mobile and AI Engineer">
+  <meta name="twitter:description" content="14 years building enterprise web and mobile platforms. Now integrating AI into production.">
+  <meta name="twitter:image" content="https://komeyl94.github.io/images/IMG_20251222_110610_226.jpg">
 
-  <link rel="apple-touch-icon" sizes="57x57"   href="images/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60"   href="images/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72"   href="images/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76"   href="images/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32"   href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96"   href="images/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16"   href="images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="manifest" href="images/manifest.json">
-  <meta name="theme-color" content="#050b14">
+  <meta name="theme-color" content="#0c0e11">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/dossier.css">
 
-  <link rel="stylesheet" href="css/aos.css">
-  <link rel="stylesheet" href="css/portfolio.css">
-  <link rel="stylesheet" href="css/projects.css">
+  <!-- Set theme before first paint to avoid a flash of the wrong mode -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var sysLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+        document.documentElement.setAttribute("data-theme", saved || (sysLight ? "light" : "dark"));
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
 </head>
 
 <body>
+  <span id="top"></span>
+  <span id="top-sentinel" aria-hidden="true" style="position:absolute;top:0;height:1px;width:1px"></span>
 
-  <!-- Cursor glow follower -->
-  <div class="cursor-glow" id="cursorGlow"></div>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="bp-grid" aria-hidden="true"></div>
 
-  <!-- Scroll progress bar -->
-  <div class="scroll-bar" id="scrollBar"></div>
+  <!-- ===== Page loader (plotting) ===== -->
+  <div id="loader" role="status" aria-live="polite" aria-label="Loading">
+    <div class="loader-mark">KM</div>
+    <div class="loader-track"><div class="loader-fill" id="loaderFill"></div></div>
+    <div class="loader-label">PLOTTING SHEET</div>
+  </div>
 
-  <!-- Navigation -->
-  <nav class="site-nav" id="siteNav">
+  <!-- ===== Navigation ===== -->
+  <nav class="nav" id="nav" aria-label="Primary">
     <div class="nav-inner">
-      <a class="nav-brand" href="#hero">KM</a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <a href="mailto:mkomeyl94@gmail.com" class="nav-cta" id="navCta">Hire Me</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a class="brand" href="#top">K. MOHEBIAN <span class="brand-tag">FE/AI</span></a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch colour theme" title="Switch theme">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"></path>
+          </svg>
+        </button>
+        <a href="mailto:mkomeyl94@gmail.com" class="nav-cta">Get in touch</a>
+        <button class="nav-burger" id="navBurger" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
-  <!-- ======================= HERO ======================= -->
-  <section id="hero">
-    <canvas id="particles"></canvas>
+  <main id="main">
 
-    <!-- Ambient orbs -->
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-
-    <div class="hero-inner">
-
-      <!-- Left: Text content -->
-      <div class="hero-content" data-aos="fade-right" data-aos-duration="800">
-        <div class="hero-chip">
-          <span class="chip-dot"></span>
-          Available for new projects
+    <!-- ============ HERO ============ -->
+    <header class="hero wrap" id="hero">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="hero-eyebrow reveal">Front-end / Mobile / AI</p>
+          <h1 class="hero-name reveal" style="--i:1">
+            <span class="ln">Komeyl</span>
+            <span class="ln ln-2">Mohebian</span>
+          </h1>
+          <p class="hero-sub reveal" style="--i:2">
+            Senior front-end and mobile engineer with <strong>14 years</strong> building enterprise
+            web and mobile platforms, now integrating AI into production.
+          </p>
+          <div class="hero-cta reveal" style="--i:3">
+            <a href="mailto:mkomeyl94@gmail.com" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"></rect><path d="m3 7 9 6 9-6"></path></svg>
+              Get in touch
+            </a>
+            <a href="https://linkedin.com/in/komeyl94/" target="_blank" rel="noopener" class="btn btn-ghost">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"></path></svg>
+              LinkedIn
+            </a>
+          </div>
         </div>
 
-        <h1 class="hero-name">
-          <span class="name-word">Komeyl</span>
-          <span class="name-word name-accent">Mohebian</span>
-        </h1>
+        <figure class="plate reveal" style="--i:2">
+          <div class="plate-frame">
+            <img src="images/IMG_20251222_110610_226.jpg" alt="Portrait of Komeyl Mohebian"
+                 fetchpriority="high" decoding="async"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+            <div class="plate-fallback" aria-hidden="true">KM</div>
+          </div>
+          <figcaption class="plate-caption">
+            <span>Lead front-end</span>
+            <span>The Hague, NL</span>
+          </figcaption>
+        </figure>
+      </div>
+    </header>
 
-        <div class="hero-role">
-          <span class="role-static">Senior&nbsp;</span><span class="role-typed" id="typewriter"></span><span class="role-cursor">_</span>
+    <!-- ============ METRICS ============ -->
+    <section class="wrap section" aria-label="Career at a glance" style="padding-top:0">
+      <div class="metrics reveal">
+        <div class="metric">
+          <div class="metric-val"><span class="num" data-count="14">0</span><span class="unit">+</span></div>
+          <div class="metric-label">Years experience</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val"><span class="num" data-count="7">0</span><span class="unit">+</span></div>
+          <div class="metric-label">Companies</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val"><span class="num" data-count="5">0</span></div>
+          <div class="metric-label">Industries</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val"><span class="num" data-count="20">0</span><span class="unit">+</span></div>
+          <div class="metric-label">Projects shipped</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROFILE ============ -->
+    <section class="wrap section" id="about">
+      <div class="sec-head">
+        <h2 class="sec-title reveal">Profile</h2>
+        <span class="sec-rule draw" style="--i:1"></span>
+      </div>
+
+      <div class="profile-grid">
+        <div class="profile-prose reveal">
+          <p>I'm a senior front-end and mobile engineer based in The Hague. Across 14 years I've shipped products in fintech, e-commerce, RegTech, transportation, and entertainment.</p>
+          <p>I lead front-end delivery at <a href="https://bugloos.com" target="_blank" rel="noopener">Bugloos</a> for enterprise clients across Europe, building Angular and TypeScript platforms from architecture through to production.</p>
+          <p>I care about clean architecture, performance, and accessible interfaces. Lately I build applied AI into real products: LLM integration, retrieval-augmented generation, and agents, and I use AI-assisted tooling to ship faster.</p>
+          <div class="materials">
+            <span class="tag">Angular</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">React Native</span>
+            <span class="tag">Flutter</span>
+            <span class="tag">RxJS</span>
+            <span class="tag">Signals</span>
+            <span class="tag">LLM APIs</span>
+            <span class="tag">RAG</span>
+          </div>
         </div>
 
-        <p class="hero-desc">
-          Crafting pixel-perfect web experiences, scalable mobile apps, and AI-powered features — 14+ years across FinTech, E-Commerce, RegTech &amp; more.
-        </p>
+        <aside class="facts reveal" style="--i:1" aria-label="Key facts">
+          <div class="fact"><span class="fact-k">Location</span><span class="fact-v">The Hague, NL</span></div>
+          <div class="fact"><span class="fact-k">Current</span><span class="fact-v">Lead Front-End, Bugloos</span></div>
+          <div class="fact"><span class="fact-k">Focus</span><span class="fact-v">Web / Mobile / AI</span></div>
+          <div class="fact"><span class="fact-k">Experience</span><span class="fact-v">14 years</span></div>
+          <div class="fact"><span class="fact-k">Languages</span><span class="fact-v">EN, FA, NL (A2)</span></div>
+          <div class="fact"><span class="fact-k">Status</span><span class="fact-v live"><span class="status-sq"></span>Available</span></div>
+        </aside>
+      </div>
+    </section>
 
-        <div class="hero-pills">
-          <span class="pill">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            The Hague, Netherlands
-          </span>
+    <!-- ============ SKILLS ============ -->
+    <section class="wrap section" id="skills">
+      <div class="sec-head">
+        <h2 class="sec-title reveal">Capabilities</h2>
+        <span class="sec-rule draw" style="--i:1"></span>
+        <p class="sec-note reveal" style="--i:1">A broad stack across modern web frameworks, cross-platform mobile, and applied AI, with the tooling and architecture to ship it at scale.</p>
+      </div>
+
+      <div class="modules">
+        <article class="module lg reveal">
+          <div class="module-top">
+            <span class="module-code">FE-01</span>
+            <span class="module-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5"></path><path d="m16 7 5 5-5 5"></path><path d="m13 4-2 16"></path></svg></span>
+          </div>
+          <h3 class="module-name">Front-end</h3>
+          <div class="module-tags"><span>Angular</span><span>React</span><span>Next.js</span><span>TypeScript</span><span>RxJS</span><span>Signals</span><span>NgRx</span><span>Redux</span></div>
+        </article>
+
+        <article class="module lg reveal" style="--i:1">
+          <div class="module-top">
+            <span class="module-code">AI-07</span>
+            <span class="module-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"></rect><path d="M10 3v2M14 3v2M10 19v2M14 19v2M3 10h2M3 14h2M19 10h2M19 14h2"></path></svg></span>
+          </div>
+          <h3 class="module-name">Applied AI</h3>
+          <div class="module-tags"><span>RAG</span><span>Embeddings</span><span>Function calling</span><span>AI agents</span><span>LLM APIs</span><span>Vercel AI SDK</span><span>LangChain</span><span>LlamaIndex</span><span>Prompt engineering</span></div>
+        </article>
+
+        <article class="module reveal">
+          <div class="module-top">
+            <span class="module-code">MB-02</span>
+            <span class="module-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"></rect><path d="M11 18h2"></path></svg></span>
+          </div>
+          <h3 class="module-name">Mobile</h3>
+          <div class="module-tags"><span>React Native</span><span>Flutter</span><span>iOS</span><span>Android</span></div>
+        </article>
+
+        <article class="module reveal" style="--i:1">
+          <div class="module-top">
+            <span class="module-code">AR-05</span>
+            <span class="module-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5z"></path><path d="m3 13 9 5 9-5"></path></svg></span>
+          </div>
+          <h3 class="module-name">Architecture</h3>
+          <div class="module-tags"><span>Component design</span><span>REST</span><span>GraphQL</span><span>Nx monorepo</span><span>SSR</span><span>OpenAPI</span></div>
+        </article>
+
+        <article class="module reveal" style="--i:2">
+          <div class="module-top">
+            <span class="module-code">CI-04</span>
+            <span class="module-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="m7 9 3 3-3 3M13 15h4"></path></svg></span>
+          </div>
+          <h3 class="module-name">Tooling and CI</h3>
+          <div class="module-tags"><span>Git</span><span>Vite</span><span>Webpack</span><span>ESLint</span><span>Jest</span><span>Storybook</span><span>Docker</span><span>GitLab CI</span><span>pnpm</span></div>
+        </article>
+
+        <article class="module lg reveal">
+          <div class="module-top">
+            <span class="module-code">ST-03</span>
+            <span class="module-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c-4.5 0-8 3.2-8 7.5 0 2.9 2.3 4.5 4.5 4.5H10a2 2 0 0 1 2 2v.5a1.5 1.5 0 0 0 1.5 1.5c4 0 6.5-3.4 6.5-8C20 6.2 16.5 3 12 3z"></path><circle cx="8" cy="11" r="1"></circle><circle cx="12" cy="8" r="1"></circle><circle cx="16" cy="11" r="1"></circle></svg></span>
+          </div>
+          <h3 class="module-name">Styling</h3>
+          <div class="module-tags"><span>Tailwind CSS</span><span>SCSS</span><span>CSS-in-JS</span><span>Responsive UI</span><span>Accessible UI</span></div>
+        </article>
+
+        <article class="module lg reveal" style="--i:1">
+          <div class="module-top">
+            <span class="module-code">UX-06</span>
+            <span class="module-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4 4 14l-1.5 5.5L8 18 18 8z"></path><path d="m12 6 6 6"></path></svg></span>
+          </div>
+          <h3 class="module-name">UI and design</h3>
+          <div class="module-tags"><span>Figma</span><span>UI design</span><span>Design-to-code</span><span>Adobe XD</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="wrap section" id="experience">
+      <div class="sec-head">
+        <h2 class="sec-title reveal">Revision history</h2>
+        <span class="sec-rule draw" style="--i:1"></span>
+        <p class="sec-note reveal" style="--i:1">Fourteen years of front-end and mobile work, most recent first.</p>
+      </div>
+
+      <div class="register">
+        <article class="rev current reveal">
+          <div class="rev-node"><span class="rev-tick"></span></div>
+          <span class="rev-axislabel mono">2023</span>
+          <div class="rev-card">
+            <div class="rev-head">
+              <div>
+                <div class="rev-co">Bugloos</div>
+                <div class="rev-role">Lead Front-End Developer</div>
+              </div>
+              <div class="rev-meta">
+                <span class="rev-tag">REV 07 / CURRENT</span>
+                <span class="rev-date">Apr 2023 - Present</span>
+                <span class="rev-loc">The Hague, NL</span>
+              </div>
+            </div>
+            <ul class="rev-list">
+              <li>Built and maintained Angular applications for a diverse client portfolio across e-commerce, travel, gaming, retail, health, and RegTech.</li>
+              <li>Translated Figma specs into pixel-perfect, accessible UI components alongside UX designers.</li>
+              <li>Reviewed code, mentored junior developers, and helped set front-end best practices.</li>
+              <li>Built an <strong>AI-powered KYC workflow</strong> integrating LLM APIs with retrieval-augmented generation and function calling to automate identity-verification document processing.</li>
+              <li>Built an internal AI meeting-summary tool that transcribes and summarizes meetings using LLM APIs and structured prompting.</li>
+              <li>Adopted AI-assisted development across the team using Claude Code and Cursor for planning, review, test generation, and docs.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="rev reveal">
+          <div class="rev-node"><span class="rev-tick"></span></div>
+          <span class="rev-axislabel mono">2022</span>
+          <div class="rev-card">
+            <div class="rev-head">
+              <div>
+                <div class="rev-co">Freelance</div>
+                <div class="rev-role">Frontend Developer</div>
+              </div>
+              <div class="rev-meta">
+                <span class="rev-date">May 2022 - Apr 2023</span>
+                <span class="rev-loc">Remote</span>
+              </div>
+            </div>
+            <ul class="rev-list">
+              <li><strong>Marvellex Exchange:</strong> built the full website and admin-panel front end for a crypto exchange in React and TypeScript.</li>
+              <li><strong>Parsian Pharmaceuticals:</strong> developed an internal HR application front end.</li>
+              <li><strong>MiliMol Classified Ads:</strong> ongoing development of a B2B chemicals marketplace.</li>
+              <li><strong>Pay.ir redesign:</strong> implemented new Figma designs into a production static website.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="rev reveal">
+          <div class="rev-node"><span class="rev-tick"></span></div>
+          <span class="rev-axislabel mono">2021</span>
+          <div class="rev-card">
+            <div class="rev-head">
+              <div>
+                <div class="rev-co">Autoshenas</div>
+                <div class="rev-role">Frontend Developer</div>
+              </div>
+              <div class="rev-meta">
+                <span class="rev-date">Jan 2021 - Mar 2022</span>
+                <span class="rev-loc">Tehran, IR</span>
+              </div>
+            </div>
+            <ul class="rev-list">
+              <li>Delivered four interconnected products: consumer website, user app, operator app, and ERP admin panel.</li>
+              <li>Owned front-end architecture from scratch, keeping UX consistent across web and mobile.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="rev reveal">
+          <div class="rev-node"><span class="rev-tick"></span></div>
+          <span class="rev-axislabel mono">2020</span>
+          <div class="rev-card">
+            <div class="rev-head">
+              <div>
+                <div class="rev-co">MegaDl</div>
+                <div class="rev-role">Frontend Developer</div>
+              </div>
+              <div class="rev-meta">
+                <span class="rev-date">Oct 2020 - May 2021</span>
+                <span class="rev-loc">Tehran, IR</span>
+              </div>
+            </div>
+            <ul class="rev-list">
+              <li>Developed a full-featured movie and TV streaming website and a companion mobile app.</li>
+              <li>Implemented video playback, search, and content discovery with a focus on performance.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="rev reveal">
+          <div class="rev-node"><span class="rev-tick"></span></div>
+          <span class="rev-axislabel mono">2016</span>
+          <div class="rev-card">
+            <div class="rev-head">
+              <div>
+                <div class="rev-co">Emji Social Network</div>
+                <div class="rev-role">Frontend Developer</div>
+              </div>
+              <div class="rev-meta">
+                <span class="rev-date">Nov 2016 - Oct 2020</span>
+                <span class="rev-loc">Tehran, IR</span>
+              </div>
+            </div>
+            <ul class="rev-list">
+              <li>Led front-end development of the EMJI social-networking app over a four-year tenure.</li>
+              <li>Built real-time features, dynamic feeds, and complex UI interactions from the ground up.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="rev reveal">
+          <div class="rev-node"><span class="rev-tick"></span></div>
+          <span class="rev-axislabel mono">2014</span>
+          <div class="rev-card">
+            <div class="rev-head">
+              <div>
+                <div class="rev-co">Designerfa</div>
+                <div class="rev-role">Front-End Developer</div>
+              </div>
+              <div class="rev-meta">
+                <span class="rev-date">Jul 2014 - Dec 2015</span>
+                <span class="rev-loc">Alborz, IR</span>
+              </div>
+            </div>
+            <ul class="rev-list">
+              <li>Designed and developed more than 20 client projects using HTML5, CSS3, JavaScript, and WordPress.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="rev reveal">
+          <div class="rev-node"><span class="rev-tick"></span></div>
+          <span class="rev-axislabel mono">2012</span>
+          <div class="rev-card">
+            <div class="rev-head">
+              <div>
+                <div class="rev-co">Negash.ir</div>
+                <div class="rev-role">Web Developer</div>
+              </div>
+              <div class="rev-meta">
+                <span class="rev-date">Dec 2012 - Dec 2015</span>
+                <span class="rev-loc">Remote</span>
+              </div>
+            </div>
+            <ul class="rev-list">
+              <li>Designed and developed blog templates and custom web projects, building a strong foundation in web fundamentals.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="wrap section" id="projects">
+      <div class="sec-head">
+        <h2 class="sec-title reveal">Selected work</h2>
+        <span class="sec-rule draw" style="--i:1"></span>
+        <p class="sec-note reveal" style="--i:1">Enterprise-scale platforms I led on the front end at Bugloos, from multi-tenant SaaS to RegTech compliance, plus AI work I build on the side.</p>
+      </div>
+
+      <div class="sheets">
+
+        <!-- DWG-001 SkiPlanner (featured) -->
+        <article class="sheet featured reveal">
+          <div class="sheet-top">
+            <div>
+              <div class="sheet-dwg">DWG-001</div>
+              <h3 class="sheet-name">SkiPlanner</h3>
+              <div class="sheet-kicker">Multi-tenant B2B SaaS for booking and capacity management</div>
+            </div>
+            <span class="sheet-role">Lead front-end</span>
+          </div>
+          <div class="sheet-body">
+            <div>
+              <p class="sheet-summary">A multi-tenant SaaS platform that ski and sport schools across Europe use to run their whole operation: instructors, lessons, bookings, calendars, capacity planning, and reporting. It grew from an internal tool into a commercial product and today serves more than <strong>100,000 users</strong>. I led the front end across four applications sharing one codebase.</p>
+              <ul class="scope">
+                <li>Architected an <strong>Nx monorepo</strong> housing four Angular apps (platform admin, school staff, customer, and auth) on a shared component and API library.</li>
+                <li>Built complex scheduling UIs with <strong>FullCalendar Scheduler</strong>: instructor assignment, skill-level grouping, capacity views, and drag-driven timetables.</li>
+                <li>Implemented reporting dashboards, data grids, rich-text editing, and timezone-aware date handling.</li>
+                <li>Consumed an auto-generated REST client from the backend OpenAPI spec, with full i18n and Sentry tracking in strict-mode TypeScript.</li>
+              </ul>
+              <a class="sheet-link" href="https://bugloos.com/case/skiplanner-custom-booking-system/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"></path><path d="M20 4 10 14"></path><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"></path></svg>
+                Read the case study
+              </a>
+            </div>
+            <div class="sheet-specs">
+              <div class="spec"><div class="spec-v">100K+</div><div class="spec-l">Users</div></div>
+              <div class="spec"><div class="spec-v">4</div><div class="spec-l">Apps, one repo</div></div>
+              <div class="spec"><div class="spec-v">7 yr</div><div class="spec-l">Evolution</div></div>
+              <div class="spec"><div class="spec-v">SaaS</div><div class="spec-l">Multi-tenant</div></div>
+            </div>
+          </div>
+          <div class="bom">
+            <div class="bom-label">Components</div>
+            <div class="bom-tags"><span>Angular 15</span><span>TypeScript</span><span>Nx</span><span>RxJS</span><span>FullCalendar Scheduler</span><span>Chart.js</span><span>ngx-translate</span><span>Bootstrap 5</span><span>Jest</span><span>Cypress</span><span>Sentry</span></div>
+          </div>
+        </article>
+
+        <!-- DWG-002 Supermarty -->
+        <article class="sheet reveal">
+          <div class="sheet-top">
+            <div>
+              <div class="sheet-dwg">DWG-002</div>
+              <h3 class="sheet-name">Supermarty</h3>
+              <div class="sheet-kicker">Consumer e-commerce, grocery price comparison</div>
+            </div>
+            <span class="sheet-role">Lead front-end</span>
+          </div>
+          <div class="sheet-body">
+            <div>
+              <p class="sheet-summary">A Dutch consumer web app that helps people compare grocery prices and curated bundles across supermarkets, turning a meal plan or diet goal into a ready-to-buy shopping list. The hard part was data: matching house-brands across stores and managing a catalog of more than <strong>200,000 products</strong> with real-time updates.</p>
+              <ul class="scope">
+                <li>Built a <strong>server-side-rendered</strong> Angular 18 front end using Angular Signals for reactive state.</li>
+                <li>Implemented product discovery, multi-market price comparison, cart, and curated bag flows with EN and NL localization.</li>
+                <li>Covered critical paths with Cypress and Cucumber E2E tests, shipped via GitLab CI.</li>
+              </ul>
+              <a class="sheet-link" href="https://bugloos.com/case/personalised-online-shopping-for-the-e-commerce-industry/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"></path><path d="M20 4 10 14"></path><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"></path></svg>
+                Read the case study
+              </a>
+            </div>
+            <div class="sheet-specs">
+              <div class="spec"><div class="spec-v">200K+</div><div class="spec-l">Products</div></div>
+              <div class="spec"><div class="spec-v">SSR</div><div class="spec-l">Render mode</div></div>
+              <div class="spec"><div class="spec-v">Signals</div><div class="spec-l">State</div></div>
+              <div class="spec"><div class="spec-v">EN/NL</div><div class="spec-l">Locales</div></div>
+            </div>
+          </div>
+          <div class="bom">
+            <div class="bom-label">Components</div>
+            <div class="bom-tags"><span>Angular 18</span><span>Angular SSR</span><span>Signals</span><span>TypeScript 5.5</span><span>SCSS</span><span>Cypress</span><span>GitLab CI</span><span>pnpm</span></div>
+          </div>
+        </article>
+
+        <!-- DWG-003 Complizy -->
+        <article class="sheet reveal">
+          <div class="sheet-top">
+            <div>
+              <div class="sheet-dwg">DWG-003</div>
+              <h3 class="sheet-name">Complizy</h3>
+              <div class="sheet-kicker">RegTech, KYC and AML compliance</div>
+            </div>
+            <span class="sheet-role">Lead front-end</span>
+          </div>
+          <div class="sheet-body">
+            <div>
+              <p class="sheet-summary">An enterprise KYC and AML compliance platform for regulated businesses. It guides users through multi-step identity verification and onboarding, gives compliance staff tools to review submissions and run risk assessments, and maps beneficial-ownership structures as interactive org charts.</p>
+              <ul class="scope">
+                <li>Built interactive <strong>UBO org-chart mapping</strong> with D3.js and d3-org-chart.</li>
+                <li>Engineered dynamic, schema-driven onboarding forms with NGX-Formly.</li>
+                <li>Implemented JWT auth via HTTP interceptors, multi-language with pluralization, and SonarQube quality gates across environments.</li>
+              </ul>
+            </div>
+            <div class="sheet-specs">
+              <div class="spec"><div class="spec-v">KYC</div><div class="spec-l">Domain</div></div>
+              <div class="spec"><div class="spec-v">UBO</div><div class="spec-l">Org-chart mapping</div></div>
+              <div class="spec"><div class="spec-v">D3</div><div class="spec-l">Visualization</div></div>
+              <div class="spec"><div class="spec-v">EU</div><div class="spec-l">Regulated market</div></div>
+            </div>
+          </div>
+          <div class="bom">
+            <div class="bom-label">Components</div>
+            <div class="bom-tags"><span>Angular 17</span><span>TypeScript 5.2</span><span>RxJS</span><span>NGX-Formly</span><span>D3.js</span><span>Cypress</span><span>SonarQube</span><span>Sentry</span></div>
+          </div>
+        </article>
+
+        <!-- DWG-004 UrbanSofa -->
+        <article class="sheet reveal">
+          <div class="sheet-top">
+            <div>
+              <div class="sheet-dwg">DWG-004</div>
+              <h3 class="sheet-name">UrbanSofa Dealer Portal</h3>
+              <div class="sheet-kicker">B2B commerce, ERP-integrated ordering</div>
+            </div>
+            <span class="sheet-role">Lead front-end</span>
+          </div>
+          <div class="sheet-body">
+            <div>
+              <p class="sheet-summary">A B2B platform for furniture dealers to place orders, manage quotes, track invoices, and handle service requests, paired with a back-office admin for products, dealers, billing, and logistics, all synced to the client's ERP.</p>
+              <ul class="scope">
+                <li>Built a <strong>fabric and option configurator</strong> with guided, error-preventing ordering flows.</li>
+                <li>Implemented credit and draft invoicing, templated service-request flows, and dealer profiles.</li>
+                <li>Integrated <strong>Exact Online ERP</strong> with sync logs, retries, and CRM updates, plus session-timeout handling and reCAPTCHA v3.</li>
+              </ul>
+              <a class="sheet-link" href="https://bugloos.com/case/leading-dutch-furniture-custom-ordering/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"></path><path d="M20 4 10 14"></path><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"></path></svg>
+                Read the case study
+              </a>
+            </div>
+            <div class="sheet-specs">
+              <div class="spec"><div class="spec-v">B2B</div><div class="spec-l">Segment</div></div>
+              <div class="spec"><div class="spec-v">ERP</div><div class="spec-l">Exact Online</div></div>
+              <div class="spec"><div class="spec-v">Config</div><div class="spec-l">Product builder</div></div>
+              <div class="spec"><div class="spec-v">Admin</div><div class="spec-l">Back office</div></div>
+            </div>
+          </div>
+          <div class="bom">
+            <div class="bom-label">Components</div>
+            <div class="bom-tags"><span>Angular 17</span><span>TypeScript</span><span>RxJS</span><span>NGX-Formly</span><span>ngx-datatable</span><span>Exact Online API</span><span>Karma/Jasmine</span></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- AI appendix -->
+      <div class="appendix-label reveal">
+        <h3>AI projects and tooling</h3>
+        <span class="sec-rule"></span>
+      </div>
+      <div class="appendix reveal">
+        <article class="apx">
+          <div class="apx-code">A-01<br><span class="apx-kind">Hackathon</span></div>
+          <div>
+            <div class="apx-name">AI Project-Delivery TUI</div>
+            <p class="apx-desc">A terminal tool that automates project-delivery tasks with AI agents and tool use, orchestrating multi-step workflows from the command line.</p>
+          </div>
+        </article>
+        <article class="apx">
+          <div class="apx-code">A-02<br><span class="apx-kind">Personal</span></div>
+          <div>
+            <div class="apx-name">AI Summarizer, Chrome extension</div>
+            <p class="apx-desc">A browser extension that generates on-page content summaries through LLM API calls, with structured prompting for consistent output.</p>
+          </div>
+        </article>
+        <article class="apx">
+          <div class="apx-code">A-03<br><span class="apx-kind">Side project</span></div>
+          <div>
+            <div class="apx-name">AI marketing app</div>
+            <p class="apx-desc">An exploration of AI content generation and a streaming chat UI, built with the Vercel AI SDK for real-time token streaming.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="wrap section" id="education">
+      <div class="sec-head">
+        <h2 class="sec-title reveal">Education</h2>
+        <span class="sec-rule draw" style="--i:1"></span>
+      </div>
+      <div class="edu reveal">
+        <span class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"></path><path d="M6 11v5c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-5"></path><path d="M22 9v5"></path></svg></span>
+        <div>
+          <div class="edu-degree">Bachelor's degree, Computer Software Engineering</div>
+          <div class="edu-school">Islamic Azad University</div>
         </div>
+        <div class="edu-year">2012 - 2016</div>
+      </div>
+    </section>
 
-        <div class="hero-cta">
-          <a href="#contact" class="btn-glow">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    <!-- ============ CONTACT + TITLE BLOCK ============ -->
+    <section class="wrap section contact" id="contact">
+      <div class="sec-head">
+        <h2 class="sec-title reveal">Let's work together</h2>
+        <span class="sec-rule draw" style="--i:1"></span>
+      </div>
+      <div class="contact-head reveal" style="--i:1">
+        <p>Open to senior and lead front-end roles, and to building AI features into real products. The fastest way to reach me is email.</p>
+        <div class="contact-actions">
+          <a href="mailto:mkomeyl94@gmail.com" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"></rect><path d="m3 7 9 6 9-6"></path></svg>
             Get in touch
           </a>
-          <a href="https://linkedin.com/in/komeyl94/" target="_blank" rel="noopener" class="btn-outline">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <a href="https://linkedin.com/in/komeyl94/" target="_blank" rel="noopener" class="btn btn-ghost">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"></path></svg>
             LinkedIn
           </a>
         </div>
       </div>
 
-      <!-- Right: Avatar -->
-      <div class="hero-visual" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
-        <div class="avatar-frame" id="avatarFrame">
-          <div class="avatar-ring ring-outer"></div>
-          <div class="avatar-ring ring-inner"></div>
-          <div class="avatar-glow-halo"></div>
-          <img class="avatar-photo" src="images/IMG_20251222_110610_226.jpg" alt="Komeyl Mohebian"
-               onerror="this.style.display='none';document.getElementById('avatarFallback').style.display='flex'">
-          <div class="avatar-fallback" id="avatarFallback">KM</div>
-        </div>
-
-        <!-- Floating info badges -->
-        <div class="floating-badge fb-1">
-          <span class="fb-dot"></span>
-          Open to work
-        </div>
-        <div class="floating-badge fb-2">⚡ 14+ Years Exp.</div>
-        <div class="floating-badge fb-3">🌐 Web · Mobile · AI</div>
-      </div>
-    </div>
-
-    <!-- Stats bar -->
-    <div class="hero-stats-bar">
-      <div class="hstat">
-        <div class="hstat-num-row"><span class="hstat-val" data-target="14">0</span><span class="hstat-plus">+</span></div>
-        <span class="hstat-lbl">Years Exp.</span>
-      </div>
-      <div class="hstat-divider"></div>
-      <div class="hstat">
-        <div class="hstat-num-row"><span class="hstat-val" data-target="7">0</span><span class="hstat-plus">+</span></div>
-        <span class="hstat-lbl">Companies</span>
-      </div>
-      <div class="hstat-divider"></div>
-      <div class="hstat">
-        <div class="hstat-num-row"><span class="hstat-val" data-target="5">0</span></div>
-        <span class="hstat-lbl">Industries</span>
-      </div>
-      <div class="hstat-divider"></div>
-      <div class="hstat">
-        <div class="hstat-num-row"><span class="hstat-val" data-target="20">0</span><span class="hstat-plus">+</span></div>
-        <span class="hstat-lbl">Projects</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================= ABOUT ======================= -->
-  <section id="about" class="section">
-    <div class="section-inner">
-
-      <div class="section-eyebrow" data-aos="fade-up">
-        <span class="eyebrow-num">01</span>
-        <span class="eyebrow-line"></span>
-        <span class="eyebrow-text">About</span>
-      </div>
-
-      <div class="about-layout">
-        <div class="about-img-col" data-aos="fade-right" data-aos-delay="100">
-          <div class="about-img-wrap">
-            <img src="images/IMG_20251222_110610_226.jpg" alt="Komeyl Mohebian"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="about-img-fallback">KM</div>
-            <div class="img-deco-border"></div>
-            <div class="img-deco-square"></div>
-          </div>
-        </div>
-
-        <div class="about-text-col" data-aos="fade-left" data-aos-delay="200">
-          <h2 class="section-title">Turning ideas into<br><span class="gradient-text">polished products</span></h2>
-
-          <p>Senior front-end and mobile developer with <strong>14+ years of professional experience</strong> across FinTech, E-Commerce, RegTech, Transportation, and Entertainment.</p>
-
-          <p>Currently lead front-end developer at <a href="https://bugloos.com" target="_blank" rel="noopener">Bugloos</a> in The Hague, delivering enterprise-scale Angular and TypeScript platforms — from architecture through production — for clients across Europe.</p>
-
-          <p>Passionate about clean architecture, performance, and accessible UI, and increasingly focused on applied GenAI — integrating LLMs, RAG, and AI agents into real products, and using AI-assisted development to ship faster.</p>
-
-          <div class="about-tech-row">
-            <span class="tech-pill">Angular</span>
-            <span class="tech-pill">React</span>
-            <span class="tech-pill">TypeScript</span>
-            <span class="tech-pill">React Native</span>
-            <span class="tech-pill">Flutter</span>
-            <span class="tech-pill">Next.js</span>
-            <span class="tech-pill">LLM APIs</span>
-            <span class="tech-pill">RAG</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================= SKILLS ======================= -->
-  <section id="skills" class="section section-alt">
-    <div class="section-inner">
-
-      <div class="section-eyebrow" data-aos="fade-up">
-        <span class="eyebrow-num">02</span>
-        <span class="eyebrow-line"></span>
-        <span class="eyebrow-text">Skills</span>
-      </div>
-
-      <div class="skills-header" data-aos="fade-up">
-        <h2 class="section-title">Core <span class="gradient-text">Expertise</span></h2>
-        <p class="section-sub">A broad stack spanning modern web frameworks, cross-platform mobile, and everything in between.</p>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="skill-card-glow"></div>
-          <div class="skill-top-bar"></div>
-          <div class="skill-header-row">
-            <span class="skill-emoji">⚡</span>
-            <span class="skill-num">01</span>
-          </div>
-          <h3 class="skill-name">Frontend</h3>
-          <div class="skill-tags">
-            <span>Angular</span><span>React</span><span>Next.js</span>
-            <span>TypeScript</span><span>RxJS</span><span>Signals</span><span>NgRx</span><span>Redux</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-aos="fade-up" data-aos-delay="60">
-          <div class="skill-card-glow"></div>
-          <div class="skill-top-bar"></div>
-          <div class="skill-header-row">
-            <span class="skill-emoji">📱</span>
-            <span class="skill-num">02</span>
-          </div>
-          <h3 class="skill-name">Mobile</h3>
-          <div class="skill-tags">
-            <span>React Native</span><span>Flutter</span><span>Cross-platform</span>
-            <span>iOS</span><span>Android</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-aos="fade-up" data-aos-delay="120">
-          <div class="skill-card-glow"></div>
-          <div class="skill-top-bar"></div>
-          <div class="skill-header-row">
-            <span class="skill-emoji">🎨</span>
-            <span class="skill-num">03</span>
-          </div>
-          <h3 class="skill-name">Styling</h3>
-          <div class="skill-tags">
-            <span>Tailwind CSS</span><span>SCSS</span><span>CSS-in-JS</span>
-            <span>Responsive UI</span><span>Accessible UI</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="skill-card-glow"></div>
-          <div class="skill-top-bar"></div>
-          <div class="skill-header-row">
-            <span class="skill-emoji">🔧</span>
-            <span class="skill-num">04</span>
-          </div>
-          <h3 class="skill-name">Tooling &amp; CI</h3>
-          <div class="skill-tags">
-            <span>Git</span><span>Webpack</span><span>Vite</span>
-            <span>ESLint</span><span>Jest</span><span>Storybook</span><span>Docker</span><span>GitLab CI</span><span>pnpm</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-aos="fade-up" data-aos-delay="60">
-          <div class="skill-card-glow"></div>
-          <div class="skill-top-bar"></div>
-          <div class="skill-header-row">
-            <span class="skill-emoji">🏗️</span>
-            <span class="skill-num">05</span>
-          </div>
-          <h3 class="skill-name">Architecture</h3>
-          <div class="skill-tags">
-            <span>Component Design</span><span>REST</span><span>GraphQL</span>
-            <span>Agile</span><span>Scrum</span><span>Nx Monorepo</span><span>SSR</span><span>OpenAPI</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-aos="fade-up" data-aos-delay="120">
-          <div class="skill-card-glow"></div>
-          <div class="skill-top-bar"></div>
-          <div class="skill-header-row">
-            <span class="skill-emoji">✏️</span>
-            <span class="skill-num">06</span>
-          </div>
-          <h3 class="skill-name">UI / Design</h3>
-          <div class="skill-tags">
-            <span>Figma</span><span>UI Design</span><span>Design-to-code</span>
-            <span>Adobe XD</span><span>Photoshop</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-aos="fade-up" data-aos-delay="60">
-          <div class="skill-card-glow"></div>
-          <div class="skill-top-bar"></div>
-          <div class="skill-header-row">
-            <span class="skill-emoji">🤖</span>
-            <span class="skill-num">07</span>
-          </div>
-          <h3 class="skill-name">AI / GenAI</h3>
-          <div class="skill-tags">
-            <span>RAG</span><span>Embeddings</span><span>Function Calling</span>
-            <span>AI Agents</span><span>LLM APIs</span><span>Vercel AI SDK</span>
-            <span>LangChain</span><span>LlamaIndex</span><span>Prompt Engineering</span>
-            <span>Claude Code</span><span>Cursor</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================= EXPERIENCE ======================= -->
-  <section id="experience" class="section">
-    <div class="section-inner">
-
-      <div class="section-eyebrow" data-aos="fade-up">
-        <span class="eyebrow-num">03</span>
-        <span class="eyebrow-line"></span>
-        <span class="eyebrow-text">Experience</span>
-      </div>
-
-      <h2 class="section-title" data-aos="fade-up">Work <span class="gradient-text">History</span></h2>
-
-      <div class="timeline">
-
-        <!-- Bugloos -->
-        <div class="tl-item tl-current" data-aos="fade-up">
-          <div class="tl-dot-wrap">
-            <div class="tl-dot"></div>
-            <div class="tl-pulse-ring"></div>
-          </div>
-          <div class="tl-card">
-            <div class="tl-accent-bar"></div>
-            <div class="tl-top">
-              <div class="tl-left-info">
-                <div class="tl-company">Bugloos</div>
-                <div class="tl-role">Lead Front-End Developer</div>
-              </div>
-              <div class="tl-right-info">
-                <span class="tl-badge tl-badge-current">● Current</span>
-                <span class="tl-date">Apr 2023 – Present</span>
-                <span class="tl-loc">The Hague, NL</span>
-              </div>
-            </div>
-            <ul class="tl-bullets">
-              <li>Built and maintained Angular-based applications for a diverse client portfolio spanning e-commerce, travel, gaming, retail, health, and RegTech.</li>
-              <li>Collaborated closely with UX designers to translate Figma specs into pixel-perfect, accessible UI components.</li>
-              <li>Contributed to code reviews, mentoring junior developers, and establishing front-end best practices.</li>
-              <li>Delivered features under tight deadlines in an agency environment, managing multiple projects simultaneously.</li>
-              <li>Built an AI-powered KYC/RegTech workflow integrating LLM APIs with retrieval-augmented generation (RAG) and function calling to automate identity-verification document processing.</li>
-              <li>Developed an internal AI meeting-summary tool that transcribes and summarises meetings using LLM APIs and structured prompting.</li>
-              <li>Adopted AI-assisted development across the team workflow — planning, code review, test generation, and documentation — using Claude Code and Cursor to accelerate delivery.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Freelance -->
-        <div class="tl-item" data-aos="fade-up">
-          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-          <div class="tl-card">
-            <div class="tl-accent-bar"></div>
-            <div class="tl-top">
-              <div class="tl-left-info">
-                <div class="tl-company">Freelance</div>
-                <div class="tl-role">Frontend Developer</div>
-              </div>
-              <div class="tl-right-info">
-                <span class="tl-date">May 2022 – Apr 2023</span>
-                <span class="tl-loc">Remote</span>
-              </div>
-            </div>
-            <ul class="tl-bullets">
-              <li><strong>Marvellex Exchange:</strong> Built full website and admin panel frontend for a crypto exchange (React / TypeScript).</li>
-              <li><strong>Parsian Pharmaceuticals:</strong> Developed an internal HR application frontend.</li>
-              <li><strong>MiliMol Classified Ads:</strong> Ongoing development of a B2B chemicals marketplace.</li>
-              <li><strong>Pay.ir Redesign:</strong> Implemented new Figma designs into a production static website.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Autoshenas -->
-        <div class="tl-item" data-aos="fade-up">
-          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-          <div class="tl-card">
-            <div class="tl-accent-bar"></div>
-            <div class="tl-top">
-              <div class="tl-left-info">
-                <div class="tl-company">Autoshenas</div>
-                <div class="tl-role">Frontend Developer</div>
-              </div>
-              <div class="tl-right-info">
-                <span class="tl-date">Jan 2021 – Mar 2022</span>
-                <span class="tl-loc">Tehran, Iran</span>
-              </div>
-            </div>
-            <ul class="tl-bullets">
-              <li>Delivered four interconnected products: consumer website, user-facing app, operator app, and ERP admin panel.</li>
-              <li>Owned front-end architecture from scratch, ensuring consistent UX across web and mobile surfaces.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- MegaDL -->
-        <div class="tl-item" data-aos="fade-up">
-          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-          <div class="tl-card">
-            <div class="tl-accent-bar"></div>
-            <div class="tl-top">
-              <div class="tl-left-info">
-                <div class="tl-company">MegaDl</div>
-                <div class="tl-role">Frontend Developer</div>
-              </div>
-              <div class="tl-right-info">
-                <span class="tl-date">Oct 2020 – May 2021</span>
-                <span class="tl-loc">Tehran, Iran</span>
-              </div>
-            </div>
-            <ul class="tl-bullets">
-              <li>Developed a full-featured movie and TV streaming website and companion mobile application.</li>
-              <li>Implemented video playback, search, and content discovery features with a focus on performance.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Emji -->
-        <div class="tl-item" data-aos="fade-up">
-          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-          <div class="tl-card">
-            <div class="tl-accent-bar"></div>
-            <div class="tl-top">
-              <div class="tl-left-info">
-                <div class="tl-company">Emji Social Network</div>
-                <div class="tl-role">Frontend Developer</div>
-              </div>
-              <div class="tl-right-info">
-                <span class="tl-date">Nov 2016 – Oct 2020</span>
-                <span class="tl-loc">Tehran, Iran</span>
-              </div>
-            </div>
-            <ul class="tl-bullets">
-              <li>Led front-end development of the EMJI social networking application over a 4-year tenure.</li>
-              <li>Built real-time features, dynamic feeds, and complex UI interactions from the ground up.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Designerfa -->
-        <div class="tl-item" data-aos="fade-up">
-          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-          <div class="tl-card">
-            <div class="tl-accent-bar"></div>
-            <div class="tl-top">
-              <div class="tl-left-info">
-                <div class="tl-company">Designerfa</div>
-                <div class="tl-role">Front-End Developer</div>
-              </div>
-              <div class="tl-right-info">
-                <span class="tl-date">Jul 2014 – Dec 2015</span>
-                <span class="tl-loc">Alborz, Iran</span>
-              </div>
-            </div>
-            <ul class="tl-bullets">
-              <li>Designed and developed 20+ client projects using HTML5, CSS3, JavaScript, and WordPress.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Negash.ir -->
-        <div class="tl-item" data-aos="fade-up">
-          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-          <div class="tl-card">
-            <div class="tl-accent-bar"></div>
-            <div class="tl-top">
-              <div class="tl-left-info">
-                <div class="tl-company">Negash.ir</div>
-                <div class="tl-role">Web Developer</div>
-              </div>
-              <div class="tl-right-info">
-                <span class="tl-date">Dec 2012 – Dec 2015</span>
-              </div>
-            </div>
-            <ul class="tl-bullets">
-              <li>Designed and developed blog templates and custom web projects; built a strong foundation in web fundamentals.</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================= PROJECTS ======================= -->
-  <section id="projects" class="section section-alt">
-    <div class="section-inner">
-
-      <div class="section-eyebrow" data-aos="fade-up">
-        <span class="eyebrow-num">04</span>
-        <span class="eyebrow-line"></span>
-        <span class="eyebrow-text">Selected Work</span>
-      </div>
-
-      <h2 class="section-title" data-aos="fade-up">Featured <span class="gradient-text">Projects</span></h2>
-      <p class="section-sub" data-aos="fade-up">Enterprise-scale platforms I led on the front end at Bugloos — from multi-tenant SaaS to RegTech compliance — plus AI work I build on the side.</p>
-
-      <div class="projects-grid">
-
-        <!-- ── FEATURED: SkiPlanner ── -->
-        <article class="proj-card proj-featured" data-aos="fade-up">
-          <div class="proj-accent-bar"></div>
-          <div class="proj-head">
-            <div class="proj-titles">
-              <h3 class="proj-name">SkiPlanner</h3>
-              <span class="proj-kicker">Multi-tenant B2B SaaS · Booking &amp; Capacity Management</span>
-              <div class="proj-meta-row">
-                <span>Bugloos</span>
-                <span>Sport &amp; Leisure</span>
-                <span>Europe-wide</span>
-              </div>
-            </div>
-            <span class="proj-role">Lead Front-End</span>
-          </div>
-
-          <p class="proj-summary">
-            A multi-tenant SaaS platform that ski and sport schools across Europe use to run their entire operation —
-            instructors, lessons, bookings, calendars, capacity planning, and reporting. It grew from an internal tool
-            into a commercial product over a long-running client partnership, and today serves <strong>100,000+ users</strong>.
-            I led the front end across four distinct applications sharing one codebase.
-          </p>
-
-          <ul class="proj-detail-list">
-            <li>Architected an <strong>Nx monorepo</strong> housing four Angular apps — platform admin (landlord), school staff (tenant), customer (client), and auth — on a shared component &amp; API library.</li>
-            <li>Built complex scheduling UIs with <strong>FullCalendar Scheduler</strong>: instructor assignment, skill-level grouping, capacity views, and drag-driven timetables.</li>
-            <li>Implemented reporting dashboards (Chart.js), data grids, rich-text editing, and full timezone-aware date handling.</li>
-            <li>Consumed an <strong>auto-generated REST client</strong> from the backend OpenAPI spec, with full i18n and Sentry error tracking in a strict-mode TypeScript codebase.</li>
-          </ul>
-
-          <div class="proj-metrics">
-            <div class="proj-metric">
-              <span class="proj-metric-val">100K+</span>
-              <span class="proj-metric-lbl">Users across Europe</span>
-            </div>
-            <div class="proj-metric">
-              <span class="proj-metric-val">4</span>
-              <span class="proj-metric-lbl">Apps in one monorepo</span>
-            </div>
-            <div class="proj-metric">
-              <span class="proj-metric-val">7 yrs</span>
-              <span class="proj-metric-lbl">Product evolution</span>
-            </div>
-            <div class="proj-metric">
-              <span class="proj-metric-val">SaaS</span>
-              <span class="proj-metric-lbl">Multi-tenant architecture</span>
-            </div>
-          </div>
-
-          <div class="proj-stack">
-            <span>Angular 15</span><span>TypeScript</span><span>Nx</span><span>RxJS</span>
-            <span>FullCalendar Scheduler</span><span>Chart.js</span><span>ngx-translate</span>
-            <span>Bootstrap 5</span><span>Jest</span><span>Cypress</span><span>Sentry</span>
-          </div>
-
-          <div class="proj-links">
-            <a class="proj-link" href="https://bugloos.com/case/skiplanner-custom-booking-system/" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Read the case study
-            </a>
-          </div>
-        </article>
-
-        <!-- ── Supermarty ── -->
-        <article class="proj-card" data-aos="fade-up">
-          <div class="proj-accent-bar"></div>
-          <div class="proj-head">
-            <div class="proj-titles">
-              <h3 class="proj-name">Supermarty</h3>
-              <span class="proj-kicker">Consumer E-Commerce · Grocery Comparison</span>
-              <div class="proj-meta-row">
-                <span>Bugloos</span>
-                <span>Netherlands</span>
-              </div>
-            </div>
-            <span class="proj-role">Lead Front-End</span>
-          </div>
-
-          <p class="proj-summary">
-            A Dutch consumer web app that helps people compare grocery prices and curated product bundles across
-            supermarkets — turning a meal plan or diet goal into a ready-to-buy shopping list. The hard part was data:
-            matching house-brands across stores and managing a catalog of <strong>200,000+ products</strong> with real-time updates.
-          </p>
-
-          <ul class="proj-detail-list">
-            <li>Built a <strong>server-side-rendered</strong> Angular 18 front end using <strong>Angular Signals</strong> for reactive state.</li>
-            <li>Implemented product discovery, multi-market price comparison, cart, and curated "bag" flows with EN/NL localization.</li>
-            <li>Covered critical paths with <strong>Cypress + Cucumber</strong> E2E tests and code coverage, shipped via GitLab CI.</li>
-          </ul>
-
-          <div class="proj-stack">
-            <span>Angular 18</span><span>Angular SSR</span><span>Signals</span><span>TypeScript 5.5</span>
-            <span>SCSS</span><span>Cypress</span><span>GitLab CI</span><span>pnpm</span>
-          </div>
-
-          <div class="proj-links">
-            <a class="proj-link" href="https://bugloos.com/case/personalised-online-shopping-for-the-e-commerce-industry/" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Read the case study
-            </a>
-          </div>
-        </article>
-
-        <!-- ── Complizy ── -->
-        <article class="proj-card" data-aos="fade-up">
-          <div class="proj-accent-bar"></div>
-          <div class="proj-head">
-            <div class="proj-titles">
-              <h3 class="proj-name">Complizy</h3>
-              <span class="proj-kicker">RegTech · KYC &amp; AML Compliance</span>
-              <div class="proj-meta-row">
-                <span>Bugloos</span>
-                <span>EU regulated market</span>
-              </div>
-            </div>
-            <span class="proj-role">Lead Front-End</span>
-          </div>
-
-          <p class="proj-summary">
-            An enterprise KYC/AML compliance platform for regulated businesses. It guides users through multi-step
-            identity verification and onboarding, gives compliance staff tools to review submissions and run risk
-            assessments, and maps beneficial-ownership (UBO) structures as interactive org charts.
-          </p>
-
-          <ul class="proj-detail-list">
-            <li>Built interactive <strong>UBO org-chart mapping</strong> with D3.js and d3-org-chart.</li>
-            <li>Engineered dynamic, schema-driven onboarding forms with <strong>NGX-Formly</strong>.</li>
-            <li>Implemented JWT auth via HTTP interceptors, multi-language with pluralization, and SonarQube quality gates across dev/staging/prod.</li>
-          </ul>
-
-          <div class="proj-stack">
-            <span>Angular 17</span><span>TypeScript 5.2</span><span>RxJS</span><span>NGX-Formly</span>
-            <span>D3.js</span><span>Cypress</span><span>SonarQube</span><span>Sentry</span>
-          </div>
-        </article>
-
-        <!-- ── UrbanSofa ── -->
-        <article class="proj-card" data-aos="fade-up">
-          <div class="proj-accent-bar"></div>
-          <div class="proj-head">
-            <div class="proj-titles">
-              <h3 class="proj-name">UrbanSofa Dealer Portal</h3>
-              <span class="proj-kicker">B2B Commerce · ERP-Integrated Ordering</span>
-              <div class="proj-meta-row">
-                <span>Bugloos</span>
-                <span>Netherlands</span>
-              </div>
-            </div>
-            <span class="proj-role">Lead Front-End</span>
-          </div>
-
-          <p class="proj-summary">
-            A B2B platform for furniture dealers to place orders, manage quotes, track invoices, and handle service
-            requests — paired with a full back-office admin for products, dealers, billing, and logistics, all synced
-            to the client's ERP.
-          </p>
-
-          <ul class="proj-detail-list">
-            <li>Built a <strong>fabric/option product configurator</strong> with guided, error-preventing ordering flows.</li>
-            <li>Implemented credit/draft invoicing, templated service-request flows, and dealer profiles.</li>
-            <li>Integrated <strong>Exact Online ERP</strong> (sync logs, retries, CRM updates), plus session-timeout handling and reCAPTCHA v3.</li>
-          </ul>
-
-          <div class="proj-stack">
-            <span>Angular 17</span><span>TypeScript</span><span>RxJS</span><span>NGX-Formly</span>
-            <span>ngx-datatable</span><span>Exact Online API</span><span>Karma/Jasmine</span>
-          </div>
-
-          <div class="proj-links">
-            <a class="proj-link" href="https://bugloos.com/case/leading-dutch-furniture-custom-ordering/" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Read the case study
-            </a>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- ── AI Projects & Tooling cluster ── -->
-      <div class="proj-subhead" data-aos="fade-up">
-        <h3>AI Projects &amp; Tooling</h3>
-        <span class="proj-subline"></span>
-      </div>
-
-      <div class="proj-ai-grid">
-        <article class="proj-mini" data-aos="fade-up">
-          <span class="proj-mini-tag">Hackathon</span>
-          <div class="proj-mini-name">AI Project-Delivery TUI</div>
-          <p class="proj-mini-desc">A terminal tool that automates project-delivery tasks using AI agents and tool use — orchestrating multi-step workflows from the command line.</p>
-        </article>
-        <article class="proj-mini" data-aos="fade-up" data-aos-delay="80">
-          <span class="proj-mini-tag">Personal</span>
-          <div class="proj-mini-name">AI Summarizer — Chrome Extension</div>
-          <p class="proj-mini-desc">A browser extension that generates on-page content summaries through LLM API calls, with structured prompting for consistent output.</p>
-        </article>
-        <article class="proj-mini" data-aos="fade-up" data-aos-delay="160">
-          <span class="proj-mini-tag">Side Project</span>
-          <div class="proj-mini-name">AI-Powered Marketing App</div>
-          <p class="proj-mini-desc">An exploration of AI content generation and a streaming chat UI, built with the Vercel AI SDK for real-time token streaming.</p>
-        </article>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ======================= EDUCATION ======================= -->
-  <section id="education" class="section section-alt">
-    <div class="section-inner">
-
-      <div class="section-eyebrow" data-aos="fade-up">
-        <span class="eyebrow-num">05</span>
-        <span class="eyebrow-line"></span>
-        <span class="eyebrow-text">Education</span>
-      </div>
-
-      <div class="edu-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="edu-icon">🎓</div>
-        <div class="edu-info">
-          <div class="edu-degree">Bachelor's Degree — Computer Software Engineering</div>
-          <div class="edu-school">Islamic Azad University</div>
-          <div class="edu-year">2012 – 2016</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================= CONTACT ======================= -->
-  <footer id="contact">
-    <div class="contact-glow"></div>
-    <div class="contact-inner">
-
-      <div class="contact-heading" data-aos="fade-up">
-        <div class="section-eyebrow eyebrow-center">
-          <span class="eyebrow-num">06</span>
-          <span class="eyebrow-line"></span>
-          <span class="eyebrow-text">Contact</span>
-        </div>
-        <h2>Let's build something<br><span class="gradient-text">great together</span></h2>
-        <p>Open to new opportunities, collaborations, or just a friendly chat about tech.</p>
-      </div>
-
-      <div class="contact-cards" data-aos="fade-up" data-aos-delay="100">
-        <a href="mailto:mkomeyl94@gmail.com" class="contact-card">
-          <div class="cc-icon cc-email">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div class="cc-text">
-            <small>Email</small>
-            <span>mkomeyl94@gmail.com</span>
-          </div>
-          <svg class="cc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </a>
-
-        <a href="https://linkedin.com/in/komeyl94/" target="_blank" rel="noopener" class="contact-card">
-          <div class="cc-icon cc-linkedin">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </div>
-          <div class="cc-text">
-            <small>LinkedIn</small>
-            <span>linkedin.com/in/komeyl94</span>
-          </div>
-          <svg class="cc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </a>
+      <!-- Title block: real record, presented as an engineering drawing's title block -->
+      <div class="titleblock reveal" style="--i:2" aria-label="Document record">
+        <div class="tb-cell tb-span-3"><div class="tb-k">Drawn by</div><div class="tb-v">Komeyl Mohebian</div></div>
+        <div class="tb-cell tb-span-5"><div class="tb-k">Discipline</div><div class="tb-v">Front-end / Mobile / Applied AI</div></div>
+        <div class="tb-cell tb-span-4"><div class="tb-k">Location</div><div class="tb-v">The Hague, Netherlands</div></div>
+        <div class="tb-cell tb-span-4"><div class="tb-k">Email</div><div class="tb-v"><a href="mailto:mkomeyl94@gmail.com">mkomeyl94@gmail.com</a></div></div>
+        <div class="tb-cell tb-span-4"><div class="tb-k">LinkedIn</div><div class="tb-v"><a href="https://linkedin.com/in/komeyl94/" target="_blank" rel="noopener">linkedin.com/in/komeyl94</a></div></div>
+        <div class="tb-cell tb-span-4"><div class="tb-k">Status</div><div class="tb-v live"><span class="status-sq"></span>Available for new work</div></div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> Komeyl Mohebian &nbsp;·&nbsp; The Hague, Netherlands</p>
+        <span>&copy; <span id="year">2026</span> Komeyl Mohebian. The Hague, Netherlands.</span>
+        <a href="#top">
+          Back to top
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"></path><path d="m6 11 6-6 6 6"></path></svg>
+        </a>
       </div>
-    </div>
-  </footer>
+    </section>
+  </main>
 
-  <!-- Page Loader -->
-  <div id="page-loader">
-    <div class="loader-logo">KM</div>
-    <div class="loader-track"><div class="loader-bar" id="loaderBar"></div></div>
-  </div>
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/aos.js"></script>
   <script>
-  /* ── AOS ── */
-  AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });
-
-  /* ── Page Loader ── */
-  window.addEventListener('load', function () {
-    var bar = document.getElementById('loaderBar');
-    var loader = document.getElementById('page-loader');
-    bar.style.width = '100%';
-    setTimeout(function () { loader.classList.add('loader-out'); }, 350);
-  });
-
-  /* ── Scroll Progress + Nav shadow ── */
-  window.addEventListener('scroll', function () {
-    var pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-    document.getElementById('scrollBar').style.width = pct + '%';
-    document.getElementById('siteNav').classList.toggle('nav-scrolled', window.scrollY > 60);
-  });
-
-  /* ── Cursor glow ── */
-  var cg = document.getElementById('cursorGlow');
-  var cx = -400, cy = -400, tx = -400, ty = -400;
-  document.addEventListener('mousemove', function (e) { tx = e.clientX; ty = e.clientY; });
-  (function tickCursor() {
-    cx += (tx - cx) * 0.1;
-    cy += (ty - cy) * 0.1;
-    cg.style.left = cx + 'px';
-    cg.style.top  = cy + 'px';
-    requestAnimationFrame(tickCursor);
-  })();
-
-  /* ── Avatar 3-D tilt on hover ── */
-  var af = document.getElementById('avatarFrame');
-  if (af) {
-    af.addEventListener('mousemove', function (e) {
-      var r = af.getBoundingClientRect();
-      var rx = ((e.clientY - r.top  - r.height / 2) / (r.height / 2)) * -12;
-      var ry = ((e.clientX - r.left - r.width  / 2) / (r.width  / 2)) *  12;
-      af.style.transform = 'perspective(700px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
-    });
-    af.addEventListener('mouseleave', function () {
-      af.style.transform = 'perspective(700px) rotateX(0) rotateY(0)';
-    });
-  }
-
-  /* ── Typewriter ── */
-  var phrases = ['Front-End Developer', 'Mobile Developer', 'Angular Engineer', 'AI-Powered Developer'];
-  var pi = 0, ci = 0, deleting = false;
-  var tw = document.getElementById('typewriter');
-  function tick() {
-    var p = phrases[pi % phrases.length];
-    if (!deleting) {
-      tw.textContent = p.slice(0, ++ci);
-      if (ci === p.length) { deleting = true; setTimeout(tick, 1800); return; }
-    } else {
-      tw.textContent = p.slice(0, --ci);
-      if (ci === 0) { deleting = false; pi++; }
-    }
-    setTimeout(tick, deleting ? 55 : 85);
-  }
-  tick();
-
-  /* ── Counter animation ── */
-  var counters = document.querySelectorAll('.hstat-val');
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (!e.isIntersecting) return;
-      var el = e.target, target = parseInt(el.dataset.target), cur = 0;
-      var step = Math.max(1, Math.ceil(target / 28));
-      var t = setInterval(function () {
-        cur = Math.min(cur + step, target);
-        el.textContent = cur;
-        if (cur >= target) clearInterval(t);
-      }, 45);
-      io.unobserve(el);
-    });
-  }, { threshold: 0.6 });
-  counters.forEach(function (c) { io.observe(c); });
-
-  /* ── Particle canvas ── */
   (function () {
-    var canvas = document.getElementById('particles');
-    if (!canvas) return;
-    var ctx = canvas.getContext('2d');
-    var W, H, pts;
+    "use strict";
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    function resize() {
-      W = canvas.width  = canvas.offsetWidth;
-      H = canvas.height = canvas.offsetHeight;
-    }
-
-    function Pt() {
-      this.x  = Math.random() * W;
-      this.y  = Math.random() * H;
-      this.vx = (Math.random() - 0.5) * 0.35;
-      this.vy = (Math.random() - 0.5) * 0.35;
-      this.r  = Math.random() * 1.4 + 0.4;
-      this.a  = Math.random() * 0.45 + 0.15;
-      this.hue = Math.random() > 0.55 ? '0,240,255' : '168,85,247';
-    }
-
-    function init() {
-      resize();
-      pts = [];
-      var n = Math.min(Math.floor((W * H) / 13000), 90);
-      for (var i = 0; i < n; i++) pts.push(new Pt());
-    }
-
-    function draw() {
-      ctx.clearRect(0, 0, W, H);
-      for (var i = 0; i < pts.length; i++) {
-        var p = pts[i];
-        p.x += p.vx; p.y += p.vy;
-        if (p.x < 0) p.x = W; else if (p.x > W) p.x = 0;
-        if (p.y < 0) p.y = H; else if (p.y > H) p.y = 0;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, 6.283);
-        ctx.fillStyle = 'rgba(' + p.hue + ',' + p.a + ')';
-        ctx.fill();
-      }
-      for (var i = 0; i < pts.length - 1; i++) {
-        for (var j = i + 1; j < pts.length; j++) {
-          var dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y;
-          var d = Math.sqrt(dx * dx + dy * dy);
-          if (d < 115) {
-            ctx.beginPath();
-            ctx.moveTo(pts[i].x, pts[i].y);
-            ctx.lineTo(pts[j].x, pts[j].y);
-            ctx.strokeStyle = 'rgba(0,240,255,' + ((1 - d / 115) * 0.12) + ')';
-            ctx.lineWidth = 0.5;
-            ctx.stroke();
-          }
-        }
-      }
-      requestAnimationFrame(draw);
-    }
-
-    init();
-    draw();
-    window.addEventListener('resize', init);
-  })();
-
-  /* ── Mobile Nav ── */
-  var toggle = document.getElementById('navToggle');
-  var links  = document.getElementById('navLinks');
-  toggle.addEventListener('click', function () {
-    links.classList.toggle('nav-open');
-    toggle.classList.toggle('is-open');
-  });
-  document.querySelectorAll('#navLinks a').forEach(function (a) {
-    a.addEventListener('click', function () {
-      links.classList.remove('nav-open');
-      toggle.classList.remove('is-open');
+    /* ---- Theme toggle ---- */
+    var toggle = document.getElementById("themeToggle");
+    toggle.addEventListener("click", function () {
+      var next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
     });
-  });
+
+    /* ---- Page loader (plotting) ---- */
+    var loader = document.getElementById("loader");
+    var fill = document.getElementById("loaderFill");
+    function finishLoader() {
+      if (!loader || loader.classList.contains("done")) return;
+      if (fill) fill.style.width = "100%";
+      setTimeout(function () { loader.classList.add("done"); }, reduce ? 0 : 320);
+    }
+    if (fill) requestAnimationFrame(function () { fill.style.width = reduce ? "100%" : "70%"; });
+    window.addEventListener("load", finishLoader);
+    setTimeout(finishLoader, 1600); /* safety net if load is slow */
+
+    /* ---- Year ---- */
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    /* ---- Mobile nav ---- */
+    var nav = document.getElementById("nav");
+    var burger = document.getElementById("navBurger");
+    var navLinks = document.getElementById("navLinks");
+    burger.addEventListener("click", function () {
+      var open = nav.classList.toggle("open");
+      burger.classList.toggle("open", open);
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    navLinks.addEventListener("click", function (e) {
+      if (e.target.tagName === "A") {
+        nav.classList.remove("open");
+        burger.classList.remove("open");
+        burger.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    /* ---- Nav background on scroll (IntersectionObserver, no scroll listener) ---- */
+    var sentinel = document.getElementById("top-sentinel");
+    if (sentinel && "IntersectionObserver" in window) {
+      new IntersectionObserver(function (entries) {
+        nav.classList.toggle("scrolled", !entries[0].isIntersecting);
+      }).observe(sentinel);
+    } else {
+      nav.classList.add("scrolled");
+    }
+
+    /* ---- Scrollspy active nav link (IntersectionObserver) ---- */
+    var linkMap = {};
+    Array.prototype.forEach.call(navLinks.querySelectorAll("a"), function (a) {
+      linkMap[a.getAttribute("href").slice(1)] = a;
+    });
+    var spyTargets = ["about", "skills", "experience", "projects", "contact"];
+    if ("IntersectionObserver" in window) {
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            Object.keys(linkMap).forEach(function (k) { linkMap[k].classList.remove("active"); });
+            var id = en.target.id;
+            if (linkMap[id]) linkMap[id].classList.add("active");
+          }
+        });
+      }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+      spyTargets.forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) spy.observe(el);
+      });
+    }
+
+    /* ---- Reveal on scroll (IntersectionObserver) ---- */
+    var revealEls = document.querySelectorAll(".reveal, .draw");
+    if (reduce || !("IntersectionObserver" in window)) {
+      Array.prototype.forEach.call(revealEls, function (el) { el.classList.add("in"); });
+    } else {
+      var revObs = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add("in"); obs.unobserve(en.target); }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+      Array.prototype.forEach.call(revealEls, function (el) { revObs.observe(el); });
+    }
+
+    /* ---- Metric counters (IntersectionObserver) ---- */
+    var counters = document.querySelectorAll(".num[data-count]");
+    function runCount(el) {
+      var target = parseInt(el.getAttribute("data-count"), 10) || 0;
+      if (reduce) { el.textContent = target; return; }
+      var start = null, dur = 1100;
+      function step(ts) {
+        if (start === null) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased);
+        if (p < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(step);
+    }
+    if ("IntersectionObserver" in window) {
+      var cObs = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { runCount(en.target); obs.unobserve(en.target); }
+        });
+      }, { threshold: 0.6 });
+      Array.prototype.forEach.call(counters, function (el) { cObs.observe(el); });
+    } else {
+      Array.prototype.forEach.call(counters, function (el) { el.textContent = el.getAttribute("data-count"); });
+    }
+  })();
   </script>
 </body>
 </html>
